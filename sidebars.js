@@ -20,15 +20,15 @@ const sidebars = {
   guideSidebar: [
     {
       type: 'category',
-      label: '使い方',
-      items: ['guide/howtouse'],
+      label: '目次',
+      items: ['guide/LetsStart', 'guide/Gesture-basedPlaying'],
     }
   ],
   privacySidebar: [
     {
       type: 'category',
-      label: 'ブライバシー・ポリシー',
-      items: ['privacy/overview'],
+      label: '内容',
+      items: ['PrivacyPolicy'],
     }
   ],
   gallerySidebar: [

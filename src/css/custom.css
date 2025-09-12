@@ -28,3 +28,8 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* docs ページのタイトル h1 を小さくする */
+.markdown h1 {
+  font-size: 1.4rem; /* デフォルトより小さく */
+}
