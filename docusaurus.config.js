@@ -81,9 +81,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Portfolio Website',
+        title: 'grampy\'s Website',
         logo: {
-          alt: 'My Portfolio Website',
+          alt: 'grampy\'s Website',
           src: 'img/P1270443.jpg',
         },
         items: [
@@ -99,7 +99,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+//          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
