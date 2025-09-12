@@ -87,12 +87,18 @@ const config = {
           src: 'img/P1270443.jpg',
         },
         items: [
-/*          {
+          {
             type: 'docSidebar',
-            sidebarId: 'japaneseHowToUse',
+            sidebarId: 'guideSidebar',
             position: 'left',
-            label: 'Japanese How To Use',
-          }, */
+            label: '使い方',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'privacySidebar',
+            position: 'left',
+            label: 'プライバシー・ポリシー',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
