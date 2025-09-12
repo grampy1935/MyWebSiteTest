@@ -31,6 +31,13 @@ const sidebars = {
       items: ['privacy/overview'],
     }
   ],
+  gallerySidebar: [
+    {
+      type: 'category',
+      label: 'ギャラリー',
+      items: ['gallery/movies'],
+    }
+  ],
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [

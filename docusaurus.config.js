@@ -101,10 +101,16 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'gallerySidebar',
+            position: 'left',
+            label: 'ギャラリー',
+          },
+/*          {
+            type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
-          },
+          }, */
 //          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
