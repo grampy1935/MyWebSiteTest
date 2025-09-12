@@ -1,6 +1,6 @@
 ---
+id: intro          # ← 日本語版と同じにする
 sidebar_position: 1
-id: intro
 ---
 
 # Tutorial Intro
