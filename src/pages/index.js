@@ -34,27 +34,16 @@ export default function Home() {
   return (
     <Layout>
       <h1>
-        <Translate>Welcome to my website</Translate>
+        <Translate 
+          id="homepage.Welcome" 
+          description= "grampyのwebサイトにようこそ"
+        >
+        grampyのwebサイトにようこそ
+        </Translate>
       </h1>
       <main>
-        <Translate
-          id="homepage.visitMyBlog"
-          description="The homepage message to ask the user to visit my blog"
-          values={{
-            blogLink: (
-              <Link to="https://docusaurus.io/blog">
-                <Translate
-                  id="homepage.visitMyBlog.linkLabel"
-                  description="The label for the link to my blog">
-                  blog
-                </Translate>
-              </Link>
-            ),
-          }}>
-          {'You can also visit my {blogLink}'}
-        </Translate>
         <img
-          src="img/logo.svg"
+          src="img/Profile.jpg"
           alt={
             <Translate
               id="homepage.logo.alt"
