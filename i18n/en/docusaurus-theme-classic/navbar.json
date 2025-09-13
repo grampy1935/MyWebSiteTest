@@ -8,15 +8,15 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.使い方": {
-    "message": "使い方",
+    "message": "How to use",
     "description": "Navbar item with label 使い方"
   },
   "item.label.プライバシーポリシー": {
-    "message": "プライバシーポリシー",
+    "message": "Privacy Policy",
     "description": "Navbar item with label プライバシーポリシー"
   },
   "item.label.ギャラリー": {
-    "message": "ギャラリー",
+    "message": "Galerie",
     "description": "Navbar item with label ギャラリー"
   },
   "item.label.GitHub": {

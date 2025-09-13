@@ -81,7 +81,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'grampy\'s Website',
+        //title: 'grampy\'s Website',
+        title: 'grampyのWebsite',
         logo: {
           alt: 'grampy\'s Website',
           src: 'img/P1270443.jpg',
