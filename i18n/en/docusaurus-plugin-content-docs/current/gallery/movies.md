@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# ギャラリー
+# Gallery
 
-工事中
+Under Construction
 
