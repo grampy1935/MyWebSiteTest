@@ -2,8 +2,8 @@
 sidebar_position: 1
 ---
 
-# さあ始めましょう。
+# Let's start.
 
-まずは、アイコンをタップ。
+First, tap the icon.
 
-![アイコン](/img/RollPlayerPiano-iOS-Default-128x128.png)
+![icon](/img/RollPlayerPiano-iOS-Default-128x128.png)
