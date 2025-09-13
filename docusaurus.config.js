@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://github.com/grampy1935/MyWebSite.git',
+  url: 'https://grampy1935.github.io',
   //url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -34,7 +34,7 @@ const config = {
   //organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'MyWebSite', // Usually your repo name.
   //projectName: 'docusaurus', // Usually your repo name.
-  deploymentBranch: 'main',   // デフォルトは "gh-pages"
+  deploymentBranch: 'gh-pages',   // デフォルトは "gh-pages"
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
