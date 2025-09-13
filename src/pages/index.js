@@ -33,14 +33,14 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout>
-      <h1>
+      <h3>
         <Translate 
           id="homepage.Welcome" 
           description= "grampyのwebサイトにようこそ"
         >
-        grampyのwebサイトにようこそ
+        grampyのホームページです
         </Translate>
-      </h1>
+      </h3>
       <main>
         <img
           src="img/Profile.jpg"
