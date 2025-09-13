@@ -126,13 +126,13 @@
     "message": "Last updated{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.NotFound.title": {
-    "message": "Page Not Found",
-    "description": "The title of the 404 page"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Versions",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Page Not Found",
+    "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
@@ -178,14 +178,6 @@
     "message": "Collapse sidebar category '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
-  "theme.NotFound.p1": {
-    "message": "We could not find what you were looking for.",
-    "description": "The first paragraph of the 404 page"
-  },
-  "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
-    "description": "The 2nd paragraph of the 404 page"
-  },
   "theme.NavBar.navAriaLabel": {
     "message": "Main",
     "description": "The ARIA label for the main navigation"
@@ -194,13 +186,21 @@
     "message": "Languages",
     "description": "The label for the mobile language switcher dropdown"
   },
-  "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
-    "description": "The label used by the button on the collapsible TOC component"
+  "theme.NotFound.p1": {
+    "message": "We could not find what you were looking for.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "description": "The 2nd paragraph of the 404 page"
   },
   "theme.blog.post.readingTime.plurals": {
     "message": "One min read|{readingTime} min read",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "On this page",
+    "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.CodeBlock.copy": {
     "message": "Copy",
@@ -230,10 +230,6 @@
     "message": "Toggle word wrap",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
-  },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Collapse sidebar",
     "description": "The title attribute for collapse button of doc sidebar"
@@ -241,6 +237,10 @@
   "theme.docs.sidebar.collapseButtonAriaLabel": {
     "message": "Collapse sidebar",
     "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Close navigation bar",

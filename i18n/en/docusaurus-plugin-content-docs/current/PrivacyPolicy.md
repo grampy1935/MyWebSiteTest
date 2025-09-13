@@ -2,46 +2,46 @@
 sidebar_position: 2
 ---
 
-# プライバシーポリシー
+# Privacy Policy
 
-grampy1935は、Roll Player Pianoアプリを商用アプリとして制作しました。本サービスは、grampy1935が提供するものであり、そのままの状態でご利用いただくことを前提としています。
-本ページは、本サービスをご利用になる方に、個人情報の収集、利用、開示についての方針をお知らせするためのものです。
-お客様が私のサービスを利用することを選択された場合、お客様はこのポリシーに関連した情報の収集と使用に同意されたことになります。私が収集した個人情報は、本サービスの提供および改善のために使用されます。私は、本プライバシーポリシーに記載されている場合を除き、お客様の情報を誰かと使用または共有することはありません。
-本プライバシーポリシーで使用されている用語は、本プライバシーポリシーで別途定義されていない限り、Roll Player Pianoでアクセス可能な利用規約と同じ意味を持ちます。
+grampy1935 built the Roll Player Piano app as a Commercial app. This SERVICE is provided by grampy1935 and is intended for use as is.
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+The terms used in this Privacy Policy have the same meanings as in my Terms and Conditions, which is accessible at Roll Player Piano unless otherwise defined in this Privacy Policy.
 
-情報の収集と利用
-私は、お客様により良いサービスを提供するために、お客様の氏名、メールアドレス等の連絡先、お客様の購入履歴、その他の個人情報の提供をお願いすることがありますが、これらに限定されるものではありません。私が要求する情報は、お客様のデバイスに保持され、私が収集することはありません。
+Information Collection and Use
+For a better experience, while using my Service, I may require you to provide me with certain personally identifiable information, including but not limited to Contact Info including name or email address, purchase history from users. The information that I request will be retained on your device and is not collected by me in any way.
 
-ログデータ
-お客様が私のサービスをご利用になる際、アプリにエラーが発生した場合には、ログデータと呼ばれるお客様の携帯電話上のデータや情報（第三者の製品を介して）を収集することをお知らせします。このログデータには、お客様のデバイスのインターネットプロトコル（IP）アドレス、デバイス名、オペレーティングシステムのバージョン、本サービスを利用する際のアプリの設定、本サービスを利用した日時、その他の統計情報などの情報が含まれます。
+Log Data
+I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
 
-クッキー（Cookie）
-Cookieとは、少量のデータを記録したファイルで、一般的に匿名の固有識別子として使用されます。これらは、お客様が訪問したウェブサイトからお客様のブラウザに送信され、お客様のデバイスの内部メモリに保存されます。
-本サービスでは、この「クッキー」を明示的に使用していません。ただし、本アプリでは、情報収集やサービス向上のために、「Cookie」を使用する第三者のコードやライブラリを使用することがあります。お客様は、これらの「Cookie」を受け入れるか拒否するかを選択でき、また、「Cookie」がお客様のデバイスに送信されたことを知ることができます。お客様が当社のクッキーを拒否することを選択した場合、本サービスの一部を利用できなくなることがあります。
+Cookies
+Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse my cookies, you may not be able to use some portions of this Service.
 
-サービス提供者
-私は、以下の理由で、第三者の企業や個人を雇用することがあります。
-私のサービスを促進するため。
-私に代わって本サービスを提供するため。
-本サービスに関連するサービスを提供するため。
-本サービスの利用状況の分析を支援するため。
-これらの第三者がお客様の個人情報にアクセスできることを、本サービスのユーザーにお知らせしたいと思います。その理由は、当社に代わって彼らに割り当てられたタスクを実行するためです。ただし、これらの第三者は、他の目的のために情報を開示または使用しない義務を負っています。
+Service Providers
+I may employ third-party companies and individuals due to the following reasons:
+To facilitate my Service;
+To provide the Service on my behalf;
+To perform Service-related services; or
+To assist me in analyzing how my Service is used.
+I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on my behalf. However, they are obligated not to disclose or use the information for any other purpose.
 
-セキュリティ
-私は、お客様の個人情報を提供してくださるお客様の信頼を大切にし、商業的に許容される手段を用いて個人情報を保護するよう努めています。しかし、インターネットでの送信方法や電子的な保存方法は、100％安全で信頼できるものではなく、その絶対的な安全性を保証することはできないことをご了承ください。
+Security
+I value your trust in providing me your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
 
-他のサイトへのリンク
-本サービスには、他のサイトへのリンクが含まれている場合があります。お客様が第三者のリンクをクリックすると、そのサイトに移動します。これらの外部サイトは、私が運営しているものではないことにご注意ください。したがって、これらのサイトのプライバシーポリシーを確認されることを強くお勧めします。私は、第三者のサイトやサービスのコンテンツ、プライバシーポリシー、または慣行を管理することはできず、責任を負いません。
+Links to Other Sites
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
 
-お子様のプライバシー
-本サービスは、13歳未満の方を対象とするものではありません。 私は、13歳未満のお子様から意図的に個人を特定できる情報を収集することはありません。13歳未満のお子様が私に個人情報を提供したことを発見した場合、私は直ちにこれを当社のサーバーから削除します。保護者の方で、お子様が個人情報を提供したことに気づかれた場合は、必要な措置を取らせていただきますので、私までご連絡ください。
+Children’s Privacy
+These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13 years of age. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from my servers. If you are a parent or guardian and you are aware that your child has provided me with personal information, please contact me so that I will be able to do necessary actions.
 
-本プライバシーポリシーの変更
-私は、プライバシーポリシーを更新することがあります。そのため、お客様はこのページを定期的に確認し、変更点を確認することをお勧めします。変更があった場合は、このページに新しいプライバシーポリシーを掲載することで、お客様にお知らせします。
+Changes to This Privacy Policy
+I may update my Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
 
-このポリシーは、2021-06-12より有効です。
+This policy is effective as of 2021-06-12
 
-お問い合わせ
-私のプライバシーポリシーについてご質問やご提案がありましたら、ご遠慮なく grampy1935@gmail.com までご連絡ください。
+Contact Me
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at grampy1935@gmail.com.
 
-このプライバシーポリシーページは、privacypolicytemplate.netで作成され、App Privacy Policy Generatorによって修正／生成されました。
+This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator

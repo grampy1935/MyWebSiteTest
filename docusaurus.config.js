@@ -88,6 +88,10 @@ const config = {
         },
         items: [
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'guideSidebar',
             position: 'left',
@@ -115,10 +119,6 @@ const config = {
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
-            position: 'right',
-          },
-          {
-            type: 'localeDropdown',
             position: 'right',
           },
         ],

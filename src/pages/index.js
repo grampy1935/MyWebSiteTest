@@ -6,6 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import Translate from '@docusaurus/Translate';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -31,12 +32,37 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+    <Layout>
+      <h1>
+        <Translate>Welcome to my website</Translate>
+      </h1>
       <main>
-        <HomepageFeatures />
+        <Translate
+          id="homepage.visitMyBlog"
+          description="The homepage message to ask the user to visit my blog"
+          values={{
+            blogLink: (
+              <Link to="https://docusaurus.io/blog">
+                <Translate
+                  id="homepage.visitMyBlog.linkLabel"
+                  description="The label for the link to my blog">
+                  blog
+                </Translate>
+              </Link>
+            ),
+          }}>
+          {'You can also visit my {blogLink}'}
+        </Translate>
+        <img
+          src="img/logo.svg"
+          alt={
+            <Translate
+              id="homepage.logo.alt"
+              description="The homepage icon alt message">
+              Home icon
+            </Translate>
+          }
+        />
       </main>
     </Layout>
   );
