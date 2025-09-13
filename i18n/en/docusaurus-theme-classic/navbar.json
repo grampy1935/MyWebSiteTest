@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "grampy's Website",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "grampy's Website",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.使い方": {
+    "message": "How to use",
+    "description": "Navbar item with label 使い方"
+  },
+  "item.label.プライバシーポリシー": {
+    "message": "Privacy Policy",
+    "description": "Navbar item with label プライバシーポリシー"
+  },
+  "item.label.ギャラリー": {
+    "message": "Gallery",
+    "description": "Navbar item with label ギャラリー"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

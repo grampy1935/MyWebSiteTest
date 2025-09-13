@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.gallery": {
+    "message": "gallery",
+    "description": "The label for category gallery in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.guide": {
+    "message": "guide",
+    "description": "The label for category guide in sidebar tutorialSidebar"
+  },
+  "sidebar.guideSidebar.category.目次": {
+    "message": "Index",
+    "description": "The label for category 目次 in sidebar guideSidebar"
+  },
+  "sidebar.privacySidebar.category.内容": {
+    "message": "Contents",
+    "description": "The label for category 内容 in sidebar privacySidebar"
+  },
+  "sidebar.gallerySidebar.category.ギャラリー": {
+    "message": "Gallery",
+    "description": "The label for category ギャラリー in sidebar gallerySidebar"
+  }
+}
