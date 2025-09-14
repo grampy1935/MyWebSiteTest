@@ -21,7 +21,37 @@ const sidebars = {
     {
       type: 'category',
       label: '目次',
-      items: ['guide/LetsStart', 'guide/Gesture-basedPlaying'],
+      items: [
+        'guide/LetsStart', 
+        {
+          type: 'category',
+          label: 'ジェスチャー演奏モード',
+          items: [
+            'guide/Gesture_Playing_Mode/Start_StopPlaying', 'guide/Gesture_Playing_Mode/Select_an_instrument','guide/Gesture_Playing_Mode/Recording',
+            'guide/Gesture_Playing_Mode/Selecting_a_score',
+          ],
+        },
+        {
+          type: 'category',
+          label: '自動演奏モード',
+          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+        },
+        {
+          type: 'category',
+          label: '手回し演奏モード',
+          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+        },
+        {
+          type: 'category',
+          label: '楽譜の印刷',
+          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+        },
+        {
+          type: 'category',
+          label: '設定',
+          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+        },
+      ],
     }
   ],
   privacySidebar: [
