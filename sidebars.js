@@ -54,7 +54,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'アンサンブル演奏 ',
+              label: 'アンサンブル演奏',
               link: {
                 type: 'doc',
                 id: 'guide/Gesture_Playing_Mode/Ensemble_Playing/ensemble_playing-category',  // ← id を指定

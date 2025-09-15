@@ -22,5 +22,20 @@
   "sidebar.gallerySidebar.category.ギャラリー": {
     "message": "Gallery",
     "description": "The label for category ギャラリー in sidebar gallerySidebar"
+  },
+  "sidebar.guideSidebar.category.ジェスチャー演奏モード": {
+    "message": "Gesture Performance Mode"
+  },
+  "sidebar.guideSidebar.category.楽譜の情報": {
+    "message": "Score Information"
+  },
+  "sidebar.guideSidebar.category.アンサンブル演奏": {
+    "message": "Ensemble Performance"
+  },
+  "sidebar.guideSidebar.category.カメラによるジェスチャー演奏": {
+    "message": "Gesture by Camera Performance"
+  },
+  "sidebar.guideSidebar.category.自動演奏モード": {
+    "message": "Auto Play mode"
   }
 }
