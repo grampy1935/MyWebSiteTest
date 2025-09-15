@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 25
 ---
 
 # このアプリについて 
 
-このアプリについて 
+本ページへのリンクです。

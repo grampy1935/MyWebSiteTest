@@ -26,30 +26,110 @@ const sidebars = {
         {
           type: 'category',
           label: 'ジェスチャー演奏モード',
+          link: {
+            type: 'doc',
+            id: 'guide/Gesture_Playing_Mode/gesture-mode-category',  // ← id を指定
+            //description: 'ジェスチャーによる演奏モードです',
+            //slug: 'guide/Gesture_Playing_Mode/CategoryDescription', 
+          },
           items: [
-            'guide/Gesture_Playing_Mode/Start_StopPlaying', 'guide/Gesture_Playing_Mode/Select_an_instrument','guide/Gesture_Playing_Mode/Recording',
+            'guide/Gesture_Playing_Mode/Start_StopPlaying', 
+            'guide/Gesture_Playing_Mode/Select_an_instrument',
+            'guide/Gesture_Playing_Mode/Volume_Settings',
+            'guide/Gesture_Playing_Mode/Recording',
             'guide/Gesture_Playing_Mode/Selecting_a_score',
+            {
+              type: 'category',
+              label: '楽譜の情報',
+              link: {
+                type: 'doc',
+                id: 'guide/Gesture_Playing_Mode/Advanced_Score_Settings/advanced_score_settings-category',  // ← id を指定
+              },
+              items: [
+                'guide/Gesture_Playing_Mode/Advanced_Score_Settings/Changing_the_Score_Name', 
+                'guide/Gesture_Playing_Mode/Advanced_Score_Settings/Instrument_at_the_playing_time', 
+                'guide/Gesture_Playing_Mode/Advanced_Score_Settings/Play_Midi_data_directly', 
+                'guide/Gesture_Playing_Mode/Advanced_Score_Settings/Select_a_recording_take',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'アンサンブル演奏 ',
+              link: {
+                type: 'doc',
+                id: 'guide/Gesture_Playing_Mode/Ensemble_Playing/ensemble_playing-category',  // ← id を指定
+              },
+              items: [
+                'guide/Gesture_Playing_Mode/Ensemble_Playing/Preparing_for_the_playing', 
+                'guide/Gesture_Playing_Mode/Ensemble_Playing/Play_Stop', 
+              ]
+            },
+            {
+              type: 'category',
+              label: 'カメラによるジェスチャー演奏',
+              link: {
+                type: 'doc',
+                id: 'guide/Gesture_Playing_Mode/Gesture_by_Camera/gesture_by_camera-category',  // ← id を指定
+              },
+              items: [
+                'guide/Gesture_Playing_Mode/Gesture_by_Camera/Conductor_Mode', 
+                'guide/Gesture_Playing_Mode/Gesture_by_Camera/Hand-crank_Mode', 
+              ]
+            },
           ],
         },
         {
           type: 'category',
           label: '自動演奏モード',
-          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+          link: {
+            type: 'doc',
+            id: 'guide/Auto-play_Mode/auto-play_mode-category',  // ← id を指定
+          },
+          items: [
+            'guide/Auto-play_Mode/Play_Stop_Pause',
+            'guide/Auto-play_Mode/Repeat_Mode_Settings',
+            'guide/Auto-play_Mode/Fast-forward_and_rewind',
+            'guide/Auto-play_Mode/Changing_speed',
+          ],
         },
         {
           type: 'category',
           label: '手回し演奏モード',
-          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+          link: {
+            type: 'doc',
+            id: 'guide/Hand-crank_Mode/hand-crank_mode-category',  // ← id を指定
+          },
+          items: [
+            'guide/Hand-crank_Mode/Preparing_Sheet_Score',
+            'guide/Hand-crank_Mode/Preparing_for_the_playing',
+            'guide/Hand-crank_Mode/Play_Stop',
+          ],
         },
         {
           type: 'category',
           label: '楽譜の印刷',
-          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+          link: {
+            type: 'doc',
+            id: 'guide/Printing_Score/printing_score-category',  // ← id を指定
+          },
+          items: ['guide/Printing_Score/Settings_and_Actions'],
         },
         {
           type: 'category',
           label: '設定',
-          items: ['guide/Gesture_Playing_Mode/Start_StopPlaying'],
+          link: {
+            type: 'doc',
+            id: 'guide/Settings/settings-category',  // ← id を指定
+        },
+        items: [
+            'guide/Settings/In-App_Purchase',
+            'guide/Settings/Basic_Settings',
+            'guide/Settings/Gesture_by_Camera',
+            'guide/Settings/Ensemble_Setting',
+            'guide/Settings/Initialization',
+            'guide/Settings/About_this_app',
+            'guide/Settings/PrivacyPolicy',
+          ],
         },
       ],
     }
