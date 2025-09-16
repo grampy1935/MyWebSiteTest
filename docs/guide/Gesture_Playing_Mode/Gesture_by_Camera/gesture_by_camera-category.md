@@ -15,4 +15,4 @@ App内課金の「カメラを使う機能」を購入すれば、カメラに�
 
 import Link from '@docusaurus/Link';
 
-【関連項目】<Link to="/docs/guide/Settings/In-App_Purchase">App内課金</Link> 
+【関連項目】[App内課金](/docs/guide/Settings/In-App_Purchase)
