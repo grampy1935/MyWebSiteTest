@@ -140,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: 'Copyright © 2025 Takatoshi Ota. Built with Docusaurus.',
+        copyright: 'Copyright © 2025 OTAYA. Built with Docusaurus.',
       },
       prism: {
         theme: prismThemes.github,

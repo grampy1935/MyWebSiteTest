@@ -35,8 +35,8 @@
     "message": "GitHub",
     "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
   },
-  "Copyright © 2025 Takatoshi Ota. Built with Docusaurus.": {
-    "message": "Copyright © 2025 Takatoshi Ota. Built with Docusaurus.",
+  "Copyright © 2025 OTAYA. Built with Docusaurus.": {
+    "message": "Copyright © 2025 OTAYA. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
