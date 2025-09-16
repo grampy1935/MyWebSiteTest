@@ -37,5 +37,14 @@
   },
   "sidebar.guideSidebar.category.自動演奏モード": {
     "message": "Auto Play mode"
+  },
+  "sidebar.guideSidebar.category.手回し演奏モード": {
+    "message": "Hand-Crank Performance Mode"
+  },
+ "sidebar.guideSidebar.category.楽譜の印刷": {
+    "message": "Printing Score"
+  },
+ "sidebar.guideSidebar.category.設定": {
+    "message": "Settings"
   }
 }

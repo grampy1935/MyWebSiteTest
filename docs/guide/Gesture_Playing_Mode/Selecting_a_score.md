@@ -6,11 +6,16 @@ sidebar_position: 40
 
 「MIDIファイルの読み込み機能」を購入すれば、外部からMIDIファイルが読み込める様になります。
 
-読み込んだMIDIファイルは楽譜名をタップすると現れる楽譜選択ビューから選択できます。
+読み込んだMIDIファイルはホームビューの楽譜名をタップすると現れる楽譜選択ビューから選択できます。
+
+並んだ楽譜名の一つをタップするとその楽譜が選択され、自動的に楽譜選択ビューは閉じます。
+
+また、上部の検索バーから楽譜を検索することができます。
 
 import Link from '@docusaurus/Link';
 
-【関連項目】<Link to="/docs/guide/Settings/In-App_Purchase">App内課金</Link> 
+【関連項目】
+[App内課金](/docs/guide/Settings/In-App_Purchase)
 
 ヒント💡
 MIDIファイルはmusescoreといったアプリケーションを使って自分で作ることができます。本アプリはmusescoreからエクスポートしたファイルを使って動作を確認しています。

@@ -6,5 +6,4 @@ sidebar_position: 30
 
 import Link from '@docusaurus/Link';
 
-<Link to="/docs/PrivacyPolicy">プライバシーポリシー</Link> へのリンクです。
-
+[プライバシーポリシー](/docs/PrivacyPolicy)へのリンクです。

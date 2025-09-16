@@ -8,7 +8,10 @@ sidebar_position: 16
 
 現状楽譜としては40mm/70mm幅のロール楽譜あるいはディスク楽譜が使え、これはアプリから普通紙に印刷することができます。
 
-「楽譜の印刷」を参照
+import Link from '@docusaurus/Link';
+
+[「楽譜の印刷」](/docs/guide/Printing_Score/printing_score-category)を参照
+
 
 また楽譜を送る装置としては、市販の手回しオルゴール、手回し演奏玩具、回転台などがあります。
 

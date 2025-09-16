@@ -13,5 +13,6 @@ sidebar_position: 22
 
 import Link from '@docusaurus/Link';
 
-【関連項目】<br /><Link to="/docs/guide/Gesture_Playing_Mode/Gesture_by_Camera/gesture_by_camera-category">カメラによるジェスチャー演奏</Link> 
-<br />
+【関連項目】
+* [カメラによるジェスチャー演奏](/docs/guide/Gesture_Playing_Mode/Gesture_by_Camera/gesture_by_camera-category)
+* [App内課金](/docs/guide/Settings/In-App_Purchase)

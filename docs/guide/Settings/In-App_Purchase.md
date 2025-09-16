@@ -15,8 +15,7 @@ sidebar_position: 20
 import Link from '@docusaurus/Link';
 
 【関連項目】
-* <Link to="/docs/guide/Hand-crank_Mode/hand-crank_mode-category">手回し演奏モード</Link> 
-* <Link to="/docs/guide/Gesture_Playing_Mode/Gesture_by_Camera/gesture_by_camera-category">カメラによるジェスチャー演奏</Link> 
-* <Link to="/docs/guide/Gesture_Playing_Mode/Selecting_a_score">楽譜の選択</Link> 
-* <Link to="/docs/guide/Printing_Score/printing_score-category">楽譜の印刷</Link> 
-
+* [手回し演奏モード](/docs/guide/Hand-crank_Mode/hand-crank_mode-category)
+* [カメラによるジェスチャー演奏](/docs/guide/Gesture_Playing_Mode/Gesture_by_Camera/gesture_by_camera-category)
+* [楽譜の選択](/docs/guide/Gesture_Playing_Mode/Selecting_a_score)
+* [楽譜の印刷](/docs/guide/Printing_Score/printing_score-category)

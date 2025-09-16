@@ -11,4 +11,4 @@ sidebar_position: 23
 import Link from '@docusaurus/Link';
 
 【関連項目】<br />
-<Link to="/docs/guide/Gesture_Playing_Mode/Ensemble_Playing/ensemble_playing-category">アンサンブル演奏</Link> 
+[アンサンブル演奏](/docs/guide/Gesture_Playing_Mode/Ensemble_Playing/ensemble_playing-category)

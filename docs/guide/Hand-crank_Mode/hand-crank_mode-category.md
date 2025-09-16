@@ -14,10 +14,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 モード切り替えボタンは長押しするとコンテキストメニューが現れるので、そこから選択することも可能です。
 
-import Link from '@docusaurus/Link';
-
-【関連項目】<Link to="/docs/guide/Settings/In-App_Purchase">App内課金</Link> 
-
+【関連項目】
+[App内課金](/docs/guide/Settings/In-App_Purchase)
 
 
 

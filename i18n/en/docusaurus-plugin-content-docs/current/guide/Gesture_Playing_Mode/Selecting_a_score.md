@@ -14,7 +14,8 @@ You can also search for score using the search bar at the top.
 
 import Link from '@docusaurus/Link';
 
-【Related Topics】<Link to="i18n/en/docusaurus-plugin-content-docs/current/guide/Settings/In-App_Purchase">In-App Purchase</Link> 
+【Related Topics】[In-App Purchase](/docs/guide/Settings/In-App_Purchase)
 
 Tips💡
 You can create MIDI files yourself using applications like MuseScore. This app verifies functionality using files exported from MuseScore.
+
