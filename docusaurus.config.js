@@ -85,13 +85,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      //image: 'img/docusaurus-social-card.jpg',
+      image: 'img/RollPlayerPiano-iOS-Default-128x128.png',
       navbar: {
         //title: 'grampy\'s Website',
-        title: 'grampyのWebsite',
+        title: 'Roll Player Piano',
         logo: {
-          alt: 'grampy\'s Website',
-          src: 'img/P1270443.jpg',
+          alt: 'Roll Player Piano',
+          src: 'img/RollPlayerPiano-iOS-Default-128x128.png',
         },
         items: [
           {
@@ -139,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: 'Copyright © 2025 Takatoshi Ota. Built with Docusaurus.',
       },
       prism: {
         theme: prismThemes.github,

@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "grampy's Website",
+    "message": "Roll Player Piano",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "grampy's Website",
+    "message": "RollPlayerPiano",
     "description": "The alt text of navbar logo"
   },
   "item.label.使い方": {
