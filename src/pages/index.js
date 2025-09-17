@@ -38,7 +38,7 @@ export default function Home() {
           id="homepage.Welcome" 
           description= "grampyのwebサイトにようこそ"
         >
-        grampyのホームページです
+        OTAYAのホームページにようこそ
         </Translate>
       </h3>
       <main>

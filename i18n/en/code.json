@@ -323,7 +323,7 @@
     "description": "The title of the tag list page"
   },
   "homepage.Welcome": {
-    "message": "grampy's homepage"
+    "message": "Welcome to the OTAYA website"
   },
   "homepage.visitMyBlog": {
     "message": "You can also visit my {blogLink}",
