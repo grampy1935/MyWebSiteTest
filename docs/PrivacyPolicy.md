@@ -44,4 +44,4 @@ Cookieとは、少量のデータを記録したファイルで、一般的に�
 お問い合わせ
 私のプライバシーポリシーについてご質問やご提案がありましたら、ご遠慮なく grampy1935@gmail.com までご連絡ください。
 
-このプライバシーポリシーページは、privacypolicytemplate.netで作成され、App Privacy Policy Generatorによって修正／生成されました。。
+このプライバシーポリシーページは、privacypolicytemplate.netで作成され、App Privacy Policy Generatorによって修正／生成されました。
