@@ -145,7 +145,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'ギャラリー',
-      items: ['gallery/movies'],
+      items: [
+        'gallery/movies',
+        'gallery/videos'
+      ],
     }
   ],
   // But you can create a sidebar manually
