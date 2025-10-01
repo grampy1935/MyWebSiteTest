@@ -10,8 +10,8 @@ on:
         description: 'Run full fetch?'
         required: false
         default: "false"
-  #schedule:
-  #  - cron: "0 6 * * *"  # ← 毎日 15:00 JST (6:00 UTC) に自動実行
+  schedule:
+    - cron: "0 6 * * *"  # ← 毎日 15:00 JST (6:00 UTC) に自動実行
 
 permissions:
   contents: write
