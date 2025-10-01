@@ -1,46 +1,48 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy Docusaurus with YouTube Data
 
 on:
-  push:
+  push:                   # mainにpush
     branches:
       - main
+  workflow_dispatch:      # 手動実行
+    inputs:
+      full:
+        description: 'Run full fetch?'
+        required: false
+        default: "false"
+  #schedule:
+  #  - cron: "0 6 * * *"  # ← 毎日 15:00 JST (6:00 UTC) に自動実行
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  update-videos:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: 18
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build website
+      - name: Fetch YouTube videos
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          #node scripts/fetch_youtube.js
+          node scripts/updateYoutube.js "${{ github.event.inputs.full }}"
+
+      - name: Build Docusaurus
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
