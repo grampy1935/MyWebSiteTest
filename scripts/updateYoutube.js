@@ -63,7 +63,7 @@ function generateMarkdown(videos) {
   allowfullscreen
   title="${v.title}"
   frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
   allowfullscreen>
 </iframe>
 
