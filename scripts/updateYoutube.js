@@ -52,6 +52,24 @@ async function fetchAll() {
   return all;
 }
 
+function generateMarkdown(videos) {
+  return videos.map(v => `
+### ${v.title}
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/${v.id}"
+  title="${v.title}"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+${v.description || ''}
+`).join('\n');
+}
+
 (async () => {
   let videos;
   if (fullFetch) {
@@ -69,6 +87,7 @@ async function fetchAll() {
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
 
   // Markdown生成
-  let md = "# 動画一覧\n\n" + videos.map(v => `- [${v.title}](https://www.youtube.com/watch?v=${v.id})`).join("\n");
+  //let md = "# 動画一覧\n\n" + videos.map(v => `- [${v.title}](https://www.youtube.com/watch?v=${v.id})`).join("\n");
+  const md = "# 動画一覧\n\n" + generateMarkdown(videos);  // allVideos は fetch で取得した配列
   fs.writeFileSync("docs/gallery/videos.md", md);
 })();
