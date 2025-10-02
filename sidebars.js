@@ -146,7 +146,6 @@ const sidebars = {
       type: 'category',
       label: 'ギャラリー',
       items: [
-        'gallery/movies',
         'gallery/videos'
       ],
     }

@@ -69,6 +69,6 @@ async function fetchAll() {
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
 
   // Markdown生成
-  let md = "# 動画一覧\n\n" + videos.map(v => `- [${v.title}](https://www.youtube.com/watch?v=${v.id})`).join("\n");
+  let md = "# ギャラリー\n\n" + videos.map(v => `- [${v.title}](https://www.youtube.com/watch?v=${v.id})`).join("\n");
   fs.writeFileSync("docs/gallery/videos.md", md);
 })();
