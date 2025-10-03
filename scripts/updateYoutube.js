@@ -72,7 +72,10 @@ ${v.description || ''}
 }
 
 (async () => {
-  const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs", "Ny3mTCgwa84"]; // 除外したい動画ID
+  const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs"]; // 除外したい動画ID
+  //      "videoId": "5lNoj9EKuUM", "title": "16秒ごとの時間と瞬間の時間（1985）",
+  //      "videoId": "e3Ocd4BkArs", "ロール楽譜の作り方",
+
   let videos;
   if (fullFetch) {
     console.log("📦 全件取得モード");
