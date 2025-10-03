@@ -72,6 +72,7 @@ ${v.description || ''}
 }
 
 (async () => {
+  const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs", "Ny3mTCgwa84"]; // 除外したい動画ID
   let videos;
   if (fullFetch) {
     console.log("📦 全件取得モード");
@@ -83,6 +84,8 @@ ${v.description || ''}
     videos = [...latest.filter(l => !cache.find(c => c.id === l.id)), ...cache];
   }
 
+  // videos から除外
+  videos = videos.filter(v => !excludeIds.includes(v.id));
   // キャッシュ保存
   fs.writeFileSync(cacheFile, JSON.stringify(videos, null, 2));
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
