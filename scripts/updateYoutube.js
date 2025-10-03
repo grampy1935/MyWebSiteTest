@@ -6,7 +6,8 @@ console.log("DEBUG fullFetch:", fullFetch);
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-const cacheFile = ".youtube-cache.json";
+const cacheFile = "static/videos.json";  // ← 出力先を static にする
+//const cacheFile = ".youtube-cache.json";
 const channelId = "UCQNEsdkAIU2Nebbb0fxNxww"; // ← youtubeのチャンネルID
 
 // キャッシュ読み込み
@@ -94,7 +95,6 @@ ${v.description || ''}
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
 
   // Markdown生成
-  //let md = "# 動画一覧（Video List）\n\n" + videos.map(v => `- [${v.title}](https://www.youtube.com/watch?v=${v.id})`).join("\n");
   const md = "# 動画一覧（Video List）\n\n" + generateMarkdown(videos);  // allVideos は fetch で取得した配列
   fs.writeFileSync("docs/gallery/videos.md", md);
 })();
