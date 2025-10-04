@@ -88,7 +88,7 @@ ${v.description || ''}
     videos = [...latest.filter(l => !cache.find(c => c.id === l.id)), ...cache];
   }
 
-  // videos から除外
+  // videos から指定したidの動画を除外
   videos = videos.filter(v => !excludeIds.includes(v.id));
   // キャッシュ保存
   fs.writeFileSync(cacheFile, JSON.stringify(videos, null, 2));
