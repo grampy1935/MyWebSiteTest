@@ -1,32 +1,15 @@
 import React, { useState } from 'react';
 import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
-
+ 
 export default function VideoGallery() {
   const [page, setPage] = useState(0);
   const perPage = 10; // 1ページあたりの動画件数
   const totalPages = Math.ceil(videosData.length / perPage);
-
+ 
   const pageVideos = videosData.slice(page * perPage, (page + 1) * perPage);
-
+ 
   return (
-    <div>
-      <div className="video-grid">
-        {pageVideos.map(video => (
-          <div className="video-container" key={video.id}>
-            <iframe
-              width="100%"
-              height="315"
-              src={`https://www.youtube.com/embed/${video.id}`}
-              title={video.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              allowFullScreen
-            ></iframe>
-            <p>{video.title}</p>
-          </div>
-        ))}
-      </div>
-
+    <div> 
       <div className="pagination">
         <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}>
           前
@@ -37,6 +20,23 @@ export default function VideoGallery() {
         </button>
       </div>
 
+      <div className="video-grid">
+        {pageVideos.map(video => (
+          <div className="video-container" key={video.id}>
+            <p>### {video.title}</p>
+            <iframe
+              width="560"
+              height="315"
+              src={`https://www.youtube.com/embed/${video.id}`}
+              allowFullScreen
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            ></iframe>
+          </div>
+        ))}
+      </div>
+ 
       <style>
         {`
           .video-grid {
