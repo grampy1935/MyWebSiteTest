@@ -53,7 +53,7 @@ async function fetchAll() {
   return all;
 }
 
-function generateMarkdown(videos) {
+/* function generateMarkdown(videos) {
   return videos.map(v => `
 ### ${v.title}
 <div class="video-container">
@@ -70,7 +70,7 @@ function generateMarkdown(videos) {
 </div>
 ${v.description || ''}
 `).join('\n');
-}
+} */
 
 (async () => {
   const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs"]; // 除外したい動画ID
@@ -94,8 +94,8 @@ ${v.description || ''}
   fs.writeFileSync(cacheFile, JSON.stringify(videos, null, 2));
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
 
-  // Markdown生成
+/*  // Markdown生成
   console.log(`videos.length: ${videos.length}`)
   const md = "# 動画一覧（Video List）\n\n" + generateMarkdown(videos);  // allVideos は fetch で取得した配列
-  fs.writeFileSync("docs/gallery/videos.md", md);
+  fs.writeFileSync("docs/gallery/videos.md", md); */
 })();
