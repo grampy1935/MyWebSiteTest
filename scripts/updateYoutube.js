@@ -89,7 +89,9 @@ ${v.description || ''}
   }
 
   // videos から指定したidの動画を除外
-  videos = videos.filter(v => !excludeIds.includes(v.id));
+  //videos = videos.filter(v => !excludeIds.includes(v.id));
+  videos = videos.filter(v => v.id && !excludeIds.includes(v.id));
+
   // キャッシュ保存
   fs.writeFileSync(cacheFile, JSON.stringify(videos, null, 2));
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
