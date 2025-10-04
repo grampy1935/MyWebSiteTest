@@ -72,7 +72,7 @@ export default function VideoGallery() {
   const pageVideos = videosData.slice(page * perPage, (page + 1) * perPage);
 
   const startIndex = (page - 1) * perPage;
-  const currentVideos = videos.slice(startIndex, startIndex + perPage);
+  const currentVideos = videosData.slice(startIndex, startIndex + perPage);
   
   return (
     <div> 
