@@ -20,23 +20,24 @@ export default function VideoGallery() {
         </button>
       </div>
 
-      <div className="video-grid">
+      <div className="video-list">
         {pageVideos.map(video => (
-          <div className="video-container" key={video.id}>
-            <p>### {video.title}</p>
-            <iframe
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${video.id}`}
-              allowFullScreen
-              title={video.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            ></iframe>
+          <div key={video.id} className="video-item">
+            <h3 className="video-title">{video.title}</h3>
+            <div className="video-wrapper">
+              <iframe
+                width="100%"
+                height="315"
+                src={`https://www.youtube.com/embed/${video.id}`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+              />
+            </div>
           </div>
         ))}
-      </div>
- 
+      </div> 
       <style>
         {`
           .video-grid {
@@ -55,6 +56,31 @@ export default function VideoGallery() {
           .pagination button {
             margin: 0 8px;
             padding: 8px 16px;
+          }
+          .video-list {
+            display: flex;
+            flex-direction: column; /* 縦並び */
+            gap: 2rem; /* 動画の間隔 */
+          }
+          .video-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 中央寄せ */
+          }
+          .video-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-align: center;
+          }
+          .video-wrapper {
+            width: 100%;
+            max-width: 560px; /* PC の場合の最大幅 */
+            aspect-ratio: 16 / 9; /* 動画をアスペクト比固定でレスポンシブ */
+          }
+          .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
           }
         `}
       </style>
