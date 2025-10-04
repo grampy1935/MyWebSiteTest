@@ -8,11 +8,11 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 480) {
-        setMaxButtons(0);  // スマホでは0
+        setMaxButtons(1);  // スマホでは0
       } else if (window.innerWidth < 768) {
-        setMaxButtons(1);  // タブレット
+        setMaxButtons(3);  // タブレット
       } else {
-        setMaxButtons(3);  // PC
+        setMaxButtons(4);  // PC
       }
     };
     handleResize();
@@ -48,7 +48,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         ＜
       </button>
 
-      {currentPage > 4 && <div>…</div>}
+      {currentPage > maxButtons + 1 && <div>…</div>}
 
       {/* ページ番号 */}
       {pageNumbers.map((page) => (
@@ -66,7 +66,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
       ))}
 
       {/* 最終ページ側に…を表示 */}
-      {currentPage < totalPages - 3 && <div>…</div>}
+      {currentPage < totalPages - maxButtons && <div>…</div>}
 
       {/* 次へ */}
       <button
