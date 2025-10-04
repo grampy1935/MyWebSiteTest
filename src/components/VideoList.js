@@ -76,7 +76,7 @@ export default function VideoGallery() {
     <div> 
       <div className="pagination">
         <Pagination
-          page={page}
+          currentPage={page}
           totalPages={totalPages}
           onPageChange={setPage}
         />
