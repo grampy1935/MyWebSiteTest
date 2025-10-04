@@ -7,6 +7,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const repoName = process.env.GITHUB_REPOSITORY || ""; // ex. "ota-takatoshi/MyWebSiteTest"
+const isTest = repoName.endsWith("MyWebSiteTest");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,7 +26,7 @@ const config = {
   //url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/MyWebSite/',
+  baseUrl: isTest ? "/MyWebSiteTest/" : "/MyWebSite/",
   trailingSlash: false,
   //baseUrl: '/',
 
@@ -32,7 +34,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'grampy1935', // Usually your GitHub org/user name.
   //organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'MyWebSite', // Usually your repo name.
+  projectName: isTest ? "MyWebSiteTest" : "MyWebSite", // Usually your repo name.
   //projectName: 'docusaurus', // Usually your repo name.
   deploymentBranch: 'gh-pages',   // デフォルトは "gh-pages"
 
