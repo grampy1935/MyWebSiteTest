@@ -104,7 +104,16 @@ export default function VideoGallery() {
             </div>
           </div>
         ))}
-      </div> 
+      </div>
+
+      <div className="pagination">
+        <Pagination
+          currentPage={page}
+          totalPages={totalPages}
+          onPageChange={setPage}
+        />
+      </div>
+
       <style>
         {`
           .video-grid {
