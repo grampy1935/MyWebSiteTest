@@ -8,11 +8,11 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 480) {
-        setMaxButtons(1);  // スマホでは0
+        setMaxButtons(0);  // スマホでは0
       } else if (window.innerWidth < 768) {
-        setMaxButtons(3);  // タブレット
+        setMaxButtons(2);  // タブレット
       } else {
-        setMaxButtons(4);  // PC
+        setMaxButtons(3);  // PC
       }
     };
     handleResize();
