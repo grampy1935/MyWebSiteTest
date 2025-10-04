@@ -71,7 +71,8 @@ export default function VideoGallery() {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
-            text-align: center;
+            align-self: flex-start; /* ← タイトルだけ左寄せ */
+            text-align: left;
           }
           .video-wrapper {
             width: 100%;
