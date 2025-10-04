@@ -65,7 +65,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 }
 
 export default function VideoGallery() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const perPage = 10; // 1ページあたりの動画件数
   const totalPages = Math.ceil(videosData.length / perPage);
  
