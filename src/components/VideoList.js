@@ -1,23 +1,87 @@
 import React, { useState } from 'react';
 import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
  
+function Pagination({ currentPage, totalPages, onPageChange }) {
+  // 前後3ページの範囲を計算
+  const pageNumbers = [];
+  for (
+    let i = Math.max(1, currentPage - 3);
+    i <= Math.min(totalPages, currentPage + 3);
+    i++
+  ) {
+    pageNumbers.push(i);
+  }
+
+  return (
+    <div className="pagination" style={{ margin: "20px 0", textAlign: "center" }}>
+      {/* 先頭へ */}
+      <button
+        onClick={() => onPageChange(1)}
+        disabled={currentPage === 1}
+      >
+        ≪
+      </button>
+
+      {/* 前へ */}
+      <button
+        onClick={() => onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        ＜
+      </button>
+
+      {/* ページ番号 */}
+      {pageNumbers.map((page) => (
+        <button
+          key={page}
+          onClick={() => onPageChange(page)}
+          disabled={page === currentPage}
+          style={{
+            fontWeight: page === currentPage ? "bold" : "normal",
+            margin: "0 3px"
+          }}
+        >
+          {page}
+        </button>
+      ))}
+
+      {/* 次へ */}
+      <button
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        ＞
+      </button>
+
+      {/* 最後へ */}
+      <button
+        onClick={() => onPageChange(totalPages)}
+        disabled={currentPage === totalPages}
+      >
+        ≫
+      </button>
+    </div>
+  );
+}
+
 export default function VideoGallery() {
   const [page, setPage] = useState(0);
   const perPage = 10; // 1ページあたりの動画件数
   const totalPages = Math.ceil(videosData.length / perPage);
  
   const pageVideos = videosData.slice(page * perPage, (page + 1) * perPage);
- 
+
+  const startIndex = (page - 1) * perPage;
+  const currentVideos = videos.slice(startIndex, startIndex + perPage);
+  
   return (
     <div> 
       <div className="pagination">
-        <button onClick={() => setPage(p => Math.max(0, p - 1))} disabled={page === 0}>
-          前
-        </button>
-        <span> {page + 1} / {totalPages} </span>
-        <button onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))} disabled={page === totalPages - 1}>
-          次
-        </button>
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          onPageChange={setPage}
+        />
       </div>
 
       <div className="video-list">
