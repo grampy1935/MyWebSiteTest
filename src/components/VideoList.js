@@ -129,9 +129,13 @@ export default function VideoGallery() {
             margin-top: 16px;
             text-align: center;
           }
-          .pagination button {
-            margin: 0 8px;
-            padding: 8px 16px;
+          .pagination {
+            display: flex;
+            flex-wrap: wrap;       /* 幅が狭いと折り返す */
+            justify-content: center; /* 中央寄せ */
+            gap: 0.5rem;           /* ボタン間の間隔 */
+            max-width: 100%;       /* 画面幅からはみ出さない */
+            overflow-x: auto;      /* はみ出したら横スクロール */
           }
           .video-list {
             display: flex;
