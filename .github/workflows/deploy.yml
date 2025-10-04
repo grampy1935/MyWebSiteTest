@@ -41,8 +41,9 @@ jobs:
           mkdir -p static
           if [ -f gh-pages/videos.json ]; then
             cp gh-pages/videos.json static/videos.json
-          fi
-    
+          else
+            echo "No previous videos.json found."
+          fi    
       - name: Fetch YouTube videos
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
