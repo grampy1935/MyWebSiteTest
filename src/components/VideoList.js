@@ -32,7 +32,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 
       // 先頭に…を挿入するか
       if (currentPage > 4) {
-        pages.push("start-ellipsis");
+        <div>...</div>
       }
 
       {/* ページ番号 */}
