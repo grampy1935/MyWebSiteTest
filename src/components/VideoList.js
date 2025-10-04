@@ -1,13 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
 import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
+  const [maxButtons, setMaxButtons] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setMaxButtons(0);  // スマホでは0
+      } else if (window.innerWidth < 768) {
+        setMaxButtons(1);  // タブレット
+      } else {
+        setMaxButtons(3);  // PC
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // 前後3ページの範囲を計算
   const pageNumbers = [];
   for (
-    let i = Math.max(1, currentPage - 3);
-    i <= Math.min(totalPages, currentPage + 3);
+    let i = Math.max(1, currentPage - maxButtons);
+    i <= Math.min(totalPages, currentPage + maxButtons);
     i++
   ) {
     pageNumbers.push(i);
