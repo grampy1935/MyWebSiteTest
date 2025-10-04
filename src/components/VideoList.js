@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
+import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
   // 前後3ページの範囲を計算
@@ -90,7 +91,7 @@ export default function VideoGallery() {
       <div className="video-list">
         {pageVideos.map(video => (
           <div key={video.id} className="video-item">
-            <h3 className="video-title">{video.title}</h3>
+            <h3 className="video-title">{he.decode(video.title)}</h3>
             <div className="video-wrapper">
               <iframe
                 width="100%"
