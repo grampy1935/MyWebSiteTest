@@ -1,3 +1,0 @@
-# My Markdown page
-
-ここはMarkdownのページです。

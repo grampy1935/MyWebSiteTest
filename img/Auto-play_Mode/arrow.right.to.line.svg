@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Generator: Apple Native CoreSVG 341-->
+
+<svg
+   version="1.1"
+   viewBox="0 0 81.066383 59.0937"
+   id="svg33"
+   sodipodi:docname="arrow.right.to.line.svg"
+   width="81.066383"
+   height="59.0937"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs33" />
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.8524259"
+     inkscape:cx="104.47248"
+     inkscape:cy="69.06402"
+     inkscape:window-width="1408"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg33" />
+  <!--glyph: "100142", point size: 100.0, font version: "20.0d10e1", template writer version: "138.0.0"-->
+  <style
+     id="style1">.defaults {-sfsymbols-wiggle-style:linear;-sfsymbols-wiggle-angle:0}
+
+.monochrome-0 {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.right.to.line}
+
+.multicolor-0:tintColor {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.right.to.line}
+
+.hierarchical-0:primary {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.right.to.line}
+
+.SFSymbolsPreviewWireframe {fill:none;opacity:1.0;stroke:black;stroke-width:0.5}
+</style>
+  <g
+     id="Regular-S"
+     transform="translate(-9.51562,65.4355)"
+     style="fill:#000000;fill-opacity:1">
+    <path
+       class="monochrome-0 multicolor-0:tintColor hierarchical-0:primary SFSymbolsPreviewWireframe"
+       d="m 53.0273,-6.5918 c 1.0254,0 1.9532,-0.39062 2.8321,-1.2207 L 81.1035,-32.959 c 0.8789,-0.8301 1.3672,-1.8555 1.3672,-2.9297 0,-1.0742 -0.4883,-2.1484 -1.3672,-2.9785 L 55.8594,-63.9648 c -0.8789,-0.879 -1.8067,-1.2207 -2.8321,-1.2207 -2.1484,0 -3.8574,1.5625 -3.8574,3.7597 0,1.0254 0.3906,2.0996 1.0742,2.7832 l 6.7871,6.9824 16.4551,14.8438 0.8789,-2.5391 -12.0117,-0.4883 H 13.6719 c -2.2949,0 -3.90628,1.6602 -3.90628,3.9551 0,2.2949 1.61138,3.9063 3.90628,3.9063 h 48.6816 l 12.0117,-0.4395 -0.8789,-2.539 -16.4551,14.8437 -6.7871,6.9336 c -0.6836,0.7324 -1.0742,1.7578 -1.0742,2.7832 0,2.19728 1.709,3.8086 3.8574,3.8086 z m 33.3497,0 c 2.2949,0 3.955,-1.5625 3.955,-3.8086 v -50.9277 c 0,-2.2949 -1.6601,-3.8574 -3.955,-3.8574 -2.295,0 -3.9551,1.5625 -3.9551,3.8574 v 50.9277 c 0,2.2461 1.6601,3.8086 3.9551,3.8086 z"
+       id="path32"
+       style="fill:#000000;fill-opacity:1" />
+  </g>
+</svg>

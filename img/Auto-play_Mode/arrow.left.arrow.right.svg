@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Generator: Apple Native CoreSVG 341-->
+
+<svg
+   version="1.1"
+   viewBox="0 0 75.412186 92.101601"
+   id="svg36"
+   sodipodi:docname="arrow.left.arrow.right.svg"
+   width="75.412186"
+   height="92.101601"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     id="namedview36"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4262129"
+     inkscape:cx="4.908103"
+     inkscape:cy="152.85235"
+     inkscape:window-width="1552"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg36" />
+  <!--glyph: "10012D", point size: 100.0, font version: "20.0d10e1", template writer version: "138.0.0"-->
+  <style
+     id="style1">.defaults {-sfsymbols-wiggle-style:linear;-sfsymbols-wiggle-angle:180}
+
+.monochrome-0 {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:arrow.left.arrow.right}
+.monochrome-1 {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.left.arrow.right}
+
+.multicolor-0:tintColor {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:arrow.left.arrow.right}
+.multicolor-1:tintColor {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.left.arrow.right}
+
+.hierarchical-0:secondary {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:arrow.left.arrow.right}
+.hierarchical-1:primary {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:arrow.left.arrow.right}
+
+.SFSymbolsPreviewWireframe {fill:none;opacity:1.0;stroke:black;stroke-width:0.5}
+</style>
+  <g
+     id="Regular-S"
+     transform="translate(-9.51562,81.2559)"
+     style="fill:#000000;fill-opacity:1">
+    <path
+       class="monochrome-0 multicolor-0:tintColor hierarchical-0:secondary SFSymbolsPreviewWireframe"
+       d="m 83.3496,-9.86328 c 1.8066,-1.66012 1.7578,-4.24802 0,-5.90822 L 63.5742,-34.9609 c -0.7324,-0.7813 -1.9043,-1.2207 -2.832,-1.2207 -2.3438,0 -3.9063,1.6113 -3.9063,3.9062 0,1.1231 0.3907,1.9531 1.0743,2.6856 l 7.8613,7.4707 6.9336,5.8105 -9.0332,-0.4394 H 13.7207 c -2.2949,0 -3.95508,1.6601 -3.95508,3.955 0,2.295 1.66018,3.95511 3.95508,3.95511 h 49.9512 l 9.0332,-0.43945 -6.9336,5.76172 -7.8613,7.51953 c -0.6836,0.73242 -1.0743,1.5625 -1.0743,2.68554 0,2.29493 1.5625,3.90625 3.9063,3.90625 0.9277,0 2.0996,-0.4883 2.832,-1.2207 z"
+       id="path33"
+       style="fill:#000000;fill-opacity:1" />
+    <path
+       class="monochrome-1 multicolor-1:tintColor hierarchical-1:primary SFSymbolsPreviewWireframe"
+       d="m 11.084,-60.5469 c -1.75783,1.6602 -1.709,4.2481 0,5.8594 l 19.7754,19.2383 c 0.7324,0.7324 1.9043,1.2207 2.832,1.2207 2.3438,0 3.9063,-1.6113 3.9063,-3.9063 0,-1.123 -0.3907,-1.9531 -1.0743,-2.6855 l -7.8613,-7.5195 -6.9336,-5.7618 9.0332,0.4395 h 49.9512 c 2.2949,0 3.9551,-1.6602 3.9551,-3.9551 0,-2.2949 -1.6602,-3.9551 -3.9551,-3.9551 H 30.7617 l -9.0332,0.4395 6.9336,-5.7617 7.8613,-7.5196 c 0.6836,-0.7324 1.0743,-1.5625 1.0743,-2.6855 0,-2.2949 -1.5625,-3.9063 -3.9063,-3.9063 -0.9277,0 -2.0996,0.4883 -2.832,1.2207 z"
+       id="path34"
+       style="fill:#000000;fill-opacity:1" />
+  </g>
+</svg>

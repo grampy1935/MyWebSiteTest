@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Generator: Apple Native CoreSVG 341-->
+
+<svg
+   version="1.1"
+   viewBox="0 0 90.661034 71.251915"
+   id="svg33"
+   sodipodi:docname="shuffle.svg"
+   width="90.661034"
+   height="71.251915"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs33" />
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0169697"
+     inkscape:cx="133.36839"
+     inkscape:cy="66.932091"
+     inkscape:window-width="1616"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg33" />
+  <!--glyph: "10029D", point size: 100.0, font version: "20.0d10e1", template writer version: "138.0.0"-->
+  <style
+     id="style1">.defaults {-sfsymbols-wiggle-style:linear;-sfsymbols-wiggle-angle:0}
+
+.monochrome-0 {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:shuffle}
+
+.multicolor-0:tintColor {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:shuffle}
+
+.hierarchical-0:primary {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:shuffle}
+
+.SFSymbolsPreviewWireframe {fill:none;opacity:1.0;stroke:black;stroke-width:0.5}
+</style>
+  <g
+     id="Regular-S"
+     transform="translate(-9.51562,70.8066)"
+     style="fill:#000000;fill-opacity:1">
+    <path
+       class="monochrome-0 multicolor-0:tintColor hierarchical-0:primary SFSymbolsPreviewWireframe"
+       d="m 9.76562,-15.332 c 0,2.1484 1.61138,3.5644 3.95508,3.5644 h 8.7891 c 6.5429,0 10.3027,-1.8554 15.039,-7.3242 l 23.7305,-27.5879 c 3.2227,-3.7109 5.957,-5.0781 10.2051,-5.0781 h 8.0078 v 8.4473 c 0,1.7089 1.0254,2.6855 2.7344,2.6855 0.7324,0 1.5625,-0.293 2.0996,-0.7812 l 14.6484,-12.3047 c 1.2694,-1.0254 1.2694,-2.5879 0,-3.7598 L 84.3262,-69.8242 c -0.5371,-0.4395 -1.3672,-0.7324 -2.0996,-0.7324 -1.709,0 -2.7344,0.9277 -2.7344,2.6367 v 9.0332 h -8.3496 c -6.543,0 -10.3516,1.8555 -15.0879,7.3242 L 32.373,-23.9746 c -3.2714,3.7109 -5.8593,5.1269 -9.7168,5.1269 h -8.9355 c -2.3437,0 -3.95508,1.4161 -3.95508,3.5157 z m 0,-39.9903 c 0,2.0996 1.61138,3.5645 3.95508,3.5645 h 8.9355 c 3.9063,0 6.4942,1.3672 9.7168,5.0781 l 23.6817,27.5879 c 4.7363,5.4688 8.5449,7.3242 15.0879,7.3242 h 8.3496 v 9.32619 c 0,1.708988 1.0254,2.636722 2.7344,2.636722 0.7324,0 1.5625,-0.2929682 2.0996,-0.732421 L 98.9746,-12.8418 c 1.2694,-1.0742 1.2694,-2.6367 0,-3.8086 L 84.3262,-28.9551 c -0.5371,-0.4883 -1.3672,-0.7812 -2.0996,-0.7812 -1.709,0 -2.7344,0.9277 -2.7344,2.6367 v 8.2519 h -8.0078 c -4.2481,0 -6.9824,-1.416 -10.2051,-5.1269 L 37.5488,-51.5625 c -4.7363,-5.4687 -8.4961,-7.3242 -15.039,-7.3242 h -8.7891 c -2.3437,0 -3.95508,1.416 -3.95508,3.5644 z"
+       id="path32"
+       style="fill:#000000;fill-opacity:1;-sfsymbols-layer-tags:shuffle;-sfsymbols-motion-group:0" />
+  </g>
+</svg>
