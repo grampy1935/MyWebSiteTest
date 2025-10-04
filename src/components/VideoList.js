@@ -47,6 +47,9 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         </button>
       ))}
 
+      {/* 最終ページ側に…を表示 */}
+      {currentPage < totalPages - 3 && <div>…</div>}
+
       {/* 次へ */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
