@@ -95,6 +95,7 @@ ${v.description || ''}
   console.log(`✅ cache 更新済み: ${videos.length} 件`);
 
   // Markdown生成
+  console.log(`videos.length: ${videos.length}`)
   const md = "# 動画一覧（Video List）\n\n" + generateMarkdown(videos);  // allVideos は fetch で取得した配列
   fs.writeFileSync("docs/gallery/videos.md", md);
 })();
