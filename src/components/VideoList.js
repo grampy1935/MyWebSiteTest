@@ -30,9 +30,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         ＜
       </button>
 
-      if (currentPage > 4) {
-        <div>...</div>
-      }
+      {currentPage > 4 && <div>…</div>}
 
       {/* ページ番号 */}
       {pageNumbers.map((page) => (
