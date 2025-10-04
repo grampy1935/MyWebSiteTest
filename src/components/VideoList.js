@@ -30,6 +30,11 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         ＜
       </button>
 
+      // 先頭に…を挿入するか
+      if (currentPage > 4) {
+        ...
+      }
+
       {/* ページ番号 */}
       {pageNumbers.map((page) => (
         <button
