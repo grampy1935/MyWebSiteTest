@@ -2,76 +2,62 @@ import React, { useState } from 'react';
 import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
+  // 前後3ページの範囲を計算
   const pageNumbers = [];
-  const range = 3; // 前後何ページを表示するか
-
-  // 左端
-  if (currentPage > range + 2) {
-    pageNumbers.push(1);
-    pageNumbers.push("left-ellipsis");
-  } else {
-    for (let i = 1; i < currentPage; i++) {
-      pageNumbers.push(i);
-    }
-  }
-
-  // 中央（現在ページ付近）
   for (
-    let i = Math.max(1, currentPage - range);
-    i <= Math.min(totalPages, currentPage + range);
+    let i = Math.max(1, currentPage - 3);
+    i <= Math.min(totalPages, currentPage + 3);
     i++
   ) {
     pageNumbers.push(i);
   }
 
-  // 右端
-  if (currentPage < totalPages - range - 1) {
-    pageNumbers.push("right-ellipsis");
-    pageNumbers.push(totalPages);
-  } else {
-    for (let i = currentPage + 1; i <= totalPages; i++) {
-      pageNumbers.push(i);
-    }
-  }
-
   return (
     <div className="pagination" style={{ margin: "20px 0", textAlign: "center" }}>
       {/* 先頭へ */}
-      <button onClick={() => onPageChange(1)} disabled={currentPage === 1}>
+      <button
+        onClick={() => onPageChange(1)}
+        disabled={currentPage === 1}
+      >
         ≪
       </button>
 
       {/* 前へ */}
-      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
+      <button
+        onClick={() => onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
         ＜
       </button>
 
       {/* ページ番号 */}
-      {pageNumbers.map((page, index) =>
-        page === "left-ellipsis" || page === "right-ellipsis" ? (
-          <span key={index} style={{ margin: "0 5px" }}>…</span>
-        ) : (
-          <button
-            key={page}
-            onClick={() => onPageChange(page)}
-            disabled={page === currentPage}
-            style={{
-              fontWeight: page === currentPage ? "bold" : "normal",
-              margin: "0 3px",
-            }}
-          >
-            {page}
-          </button>
-        )
-      )}
+      {pageNumbers.map((page) => (
+        <button
+          key={page}
+          onClick={() => onPageChange(page)}
+          disabled={page === currentPage}
+          style={{
+            fontWeight: page === currentPage ? "bold" : "normal",
+            margin: "0 3px"
+          }}
+        >
+          {page}
+        </button>
+      ))}
 
       {/* 次へ */}
-      <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+      <button
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
         ＞
       </button>
 
       {/* 最後へ */}
-      <button onClick={() => onPageChange(totalPages)} disabled={currentPage === totalPages}>
+      <button
+        onClick={() => onPageChange(totalPages)}
+        disabled={currentPage === totalPages}
+      >
         ≫
       </button>
     </div>
