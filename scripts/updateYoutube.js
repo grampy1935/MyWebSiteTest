@@ -60,14 +60,20 @@ async function fetchAll(maxResults = 50) {
     }&key=${API_KEY}`;
 
     const searchData = await fetch(searchUrl).then(res => res.json());
-    if (!searchData.items) break;
+    if (!searchData.items) {
+      console.log("⚠️ No searchData.items found — stopping.");
+      break;
+    }
 
     const videoIds = searchData.items
       .filter(i => i.id.kind === "youtube#video")
       .map(i => i.id.videoId)
       .join(",");
 
-    if (!videoIds) break;
+    if (!videoIds) {
+      console.log("⚠️ No videoIds found — stopping.");
+      break;
+    }
 
     // ② videos API で詳細を取得
     const videosUrl = `${BASE_URL}/videos?part=snippet,contentDetails,statistics&id=${videoIds}&key=${API_KEY}`;
@@ -81,11 +87,13 @@ async function fetchAll(maxResults = 50) {
       tags: item.snippet.tags || [],
     }));
 
+    console.log(`✅ Got ${videos.length} videos from this page`);
     allVideos.push(...videos);
 
     nextPageToken = searchData.nextPageToken || "";
   } while (nextPageToken);
 
+  console.log(`🎉 fetchAll finished — total ${allVideos.length} videos`);
   return allVideos;
 }
 
