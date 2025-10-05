@@ -1,4 +1,4 @@
-name: Deploy Docusaurus with YouTube Data
+name: Test Deploy Docusaurus with YouTube Data
 
 on:
   push:                   # testにpush
