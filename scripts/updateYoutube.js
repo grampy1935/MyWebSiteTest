@@ -8,108 +8,74 @@ const fetch = require("node-fetch");
 
 const cacheFile = "static/videos.json";  // ← 出力先を static にする
 //const cacheFile = ".youtube-cache.json";
-const API_KEY = process.env.YOUTUBE_API_KEY;
-const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const channelId = "UCQNEsdkAIU2Nebbb0fxNxww"; // ← youtubeのチャンネルID
 
 // キャッシュ読み込み
 let cache = [];
 if (fs.existsSync(cacheFile)) cache = JSON.parse(fs.readFileSync(cacheFile, "utf-8"));
 
-/**
- * 最新動画を maxResults 件取得（tags含む）
- */
-async function fetchLatest(maxResults = 10) {
-  console.log("DEBUG: fetchLatest");
+async function fetchLatest(maxResults) {
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=${maxResults}&key=${process.env.YOUTUBE_API_KEY}`;
+  console.log("DEBUG: Request URL =", url);
+  const res = await fetch(url);
+  const data = await res.json();
 
-  // ① search API で動画ID取得
-  const searchUrl = `${BASE_URL}/search?part=id&channelId=${channelId}&order=date&maxResults=${maxResults}&key=${API_KEY}`;
-  console.log("DEBUG: Request URL =", searchUrl);
-  const searchData = await fetch(searchUrl).then(res => res.json());
-  console.log("DEBUG: raw search data =", JSON.stringify(searchData, null, 2));
+  console.log("DEBUG: raw data = ", JSON.stringify(data, null, 2)); // 👈 追加
 
-  const videoIds = searchData.items
-    .filter(i => i.id.kind === "youtube#video")
-    .map(i => i.id.videoId)
-    .join(",");
-
-  if (!videoIds) return [];
-
-  // ② videos API で詳細データ取得
-  const videosUrl = `${BASE_URL}/videos?part=snippet,contentDetails,statistics&id=${videoIds}&key=${API_KEY}`;
-  const videosData = await fetch(videosUrl).then(res => res.json());
-
-  // ③ 整形して返す
-  return videosData.items.map(item => ({
-    id: item.id,
-    title: item.snippet.title,
-    publishedAt: item.snippet.publishedAt,
-    tags: item.snippet.tags || [],
+  return (data.items || []).map(i => ({
+    id: i.id?.videoId,
+    title: i.snippet?.title,
+    publishedAt: i.snippet?.publishedAt,
   }));
 }
 
-/**
- * チャンネル内すべての動画を取得（複数ページ対応）
- */
-async function fetchAll(maxResults = 50) {
-  console.log("DEBUG: fetchAll");
-
-  let allVideos = [];
+async function fetchAll() {
+  let all = [];
   let nextPageToken = "";
-
+  let url = "";
+  let maxResults = 50;
   do {
-    // ① search API でページごとの動画IDを取得
-    const searchUrl = `${BASE_URL}/search?part=id&channelId=${channelId}&order=date&maxResults=${maxResults}${
-      nextPageToken ? `&pageToken=${nextPageToken}` : ""
-    }&key=${API_KEY}`;
-
-    const searchData = await fetch(searchUrl).then(res => res.json());
-    if (!searchData.items) {
-      console.log("⚠️ No searchData.items found — stopping.");
-      break;
+    if (nextPageToken != "") {
+      url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=${maxResults}&pageToken=${nextPageToken}&key=${process.env.YOUTUBE_API_KEY}`;
     } else {
-      console.log("DEBUG: searchData.items found!");
+      url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=${maxResults}&key=${process.env.YOUTUBE_API_KEY}`;
     }
 
-    const videoIds = searchData.items
-      .filter(i => i.id.kind === "youtube#video")
-      .map(i => i.id.videoId)
-      .join(",");
+    //const url = `https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=id&order=date&maxResults=50&pageToken=${nextPageToken}`;
+    const data = await fetch(url).then(res => res.json());
 
-    if (!videoIds) {
-      console.log("⚠️ No videoIds found — stopping.");
-      break;
-    } else {
-      console.log("⚠️ videoIds found !");
-    }
+    //console.log("DEBUG: items = ", JSON.stringify(data.items, null, 2));
 
-    // ② videos API で詳細を取得
-    const videosUrl = `${BASE_URL}/videos?part=snippet,contentDetails,statistics&id=${videoIds}&key=${API_KEY}`;
-    const videosData = await fetch(videosUrl).then(res => res.json());
-
-    // ③ 整形
-    const videos = videosData.items.map(item => ({
-      id: item.id,
-      title: item.snippet.title,
-      publishedAt: item.snippet.publishedAt,
-      tags: item.snippet.tags || [],
-    }));
-
-    console.log(`✅ Got ${videos.length} videos from this page`);
-    allVideos.push(...videos);
-
-    nextPageToken = searchData.nextPageToken || "";
+    if (!data.items) break;
+    all.push(...data.items.map(i => ({ id: i.id.videoId, title: i.snippet.title, publishedAt: i.snippet.publishedAt })));
+    nextPageToken = data.nextPageToken || "";
   } while (nextPageToken);
-
-  console.log(`🎉 fetchAll finished — total ${allVideos.length} videos`);
-  return allVideos;
+  return all;
 }
+
+/* function generateMarkdown(videos) {
+  return videos.map(v => `
+### ${v.title}
+<div class="video-container">
+    <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/${v.id}"
+    allowfullscreen
+    title="${v.title}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+    allowfullscreen>
+    </iframe>
+</div>
+${v.description || ''}
+`).join('\n');
+} */
 
 (async () => {
   const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs"]; // 除外したい動画ID
   //      "videoId": "5lNoj9EKuUM", "title": "16秒ごとの時間と瞬間の時間（1985）",
   //      "videoId": "e3Ocd4BkArs", "ロール楽譜の作り方",
-  console.log("Tag情報も取得！");
 
   let videos;
   if (fullFetch) {
