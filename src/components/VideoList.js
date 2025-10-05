@@ -3,69 +3,33 @@ import videosData from '@site/static/videos.json'; // Docusaurus の static 配�
 import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
-  // 前後3ページの範囲を計算
-  const pageNumbers = [];
-  for (
-    let i = Math.max(1, currentPage - 3);
-    i <= Math.min(totalPages, currentPage + 3);
-    i++
-  ) {
-    pageNumbers.push(i);
-  }
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div className="pagination" style={{ margin: "20px 0", textAlign: "center" }}>
-      {/* 先頭へ */}
-      <button
-        onClick={() => onPageChange(1)}
-        disabled={currentPage === 1}
-      >
-        ≪
-      </button>
-
-      {/* 前へ */}
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-      >
-        ＜
-      </button>
-
-      {currentPage > 4 && <div>…</div>}
-
-      {/* ページ番号 */}
+    <div
+      style={{
+        display: "flex",
+        overflowX: "auto", // 横スクロールを有効にする
+        whiteSpace: "nowrap", // 改行せずに横並び
+        padding: "5px 0",
+        gap: "4px",
+      }}
+    >
       {pageNumbers.map((page) => (
         <button
           key={page}
           onClick={() => onPageChange(page)}
           disabled={page === currentPage}
           style={{
+            minWidth: "32px",
+            padding: "5px 8px",
             fontWeight: page === currentPage ? "bold" : "normal",
-            margin: "0 3px"
+            flex: "0 0 auto", // 横スクロールで縮まないように固定
           }}
         >
           {page}
         </button>
       ))}
-
-      {/* 最終ページ側に…を表示 */}
-      {currentPage < totalPages - 3 && <div>…</div>}
-
-      {/* 次へ */}
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      >
-        ＞
-      </button>
-
-      {/* 最後へ */}
-      <button
-        onClick={() => onPageChange(totalPages)}
-        disabled={currentPage === totalPages}
-      >
-        ≫
-      </button>
     </div>
   );
 }
