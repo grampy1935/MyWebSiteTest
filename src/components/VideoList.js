@@ -42,7 +42,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
           flex: "1 1 auto",
         }}
       >
-        {start > 2 && <span style={{ padding: "0 4px" }}>…</span>}
+        {start > 1 && <span style={{ padding: "0 4px" }}>…</span>}
 
         {pages.map((page) => (
           <button
@@ -60,7 +60,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
           </button>
         ))}
 
-        {end < totalPages - 1 && <span style={{ padding: "0 4px" }}>…</span>}
+        {end < totalPages && <span style={{ padding: "0 4px" }}>…</span>}
       </div>
 
       {/* 次へ */}
