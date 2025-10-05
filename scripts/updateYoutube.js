@@ -21,7 +21,7 @@ if (fs.existsSync(cacheFile)) cache = JSON.parse(fs.readFileSync(cacheFile, "utf
  */
 async function fetchLatest(maxResults = 10) {
   console.log("DEBUG: fetchLatest");
-  
+
   // ① search API で動画ID取得
   const searchUrl = `${BASE_URL}/search?part=id&channelId=${channelId}&order=date&maxResults=${maxResults}&key=${API_KEY}`;
   console.log("DEBUG: Request URL =", searchUrl);
@@ -52,6 +52,8 @@ async function fetchLatest(maxResults = 10) {
  * チャンネル内すべての動画を取得（複数ページ対応）
  */
 async function fetchAll(maxResults = 50) {
+  console.log("DEBUG: fetchAll");
+
   let allVideos = [];
   let nextPageToken = "";
 
@@ -65,6 +67,8 @@ async function fetchAll(maxResults = 50) {
     if (!searchData.items) {
       console.log("⚠️ No searchData.items found — stopping.");
       break;
+    } else {
+      console.log("DEBUG: searchData.items found!");
     }
 
     const videoIds = searchData.items
@@ -75,6 +79,8 @@ async function fetchAll(maxResults = 50) {
     if (!videoIds) {
       console.log("⚠️ No videoIds found — stopping.");
       break;
+    } else {
+      console.log("⚠️ videoIds found !");
     }
 
     // ② videos API で詳細を取得
