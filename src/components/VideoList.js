@@ -3,33 +3,81 @@ import videosData from '@site/static/videos.json'; // Docusaurus の static 配�
 import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const range = 3; // 現在ページ前後の表示範囲
+  const pages = [];
+
+  const start = Math.max(1, currentPage - range);
+  const end = Math.min(totalPages, currentPage + range);
+
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
 
   return (
     <div
       style={{
         display: "flex",
-        overflowX: "auto", // 横スクロールを有効にする
-        whiteSpace: "nowrap", // 改行せずに横並び
-        padding: "5px 0",
+        alignItems: "center",
         gap: "4px",
+        flexWrap: "nowrap",
       }}
     >
-      {pageNumbers.map((page) => (
-        <button
-          key={page}
-          onClick={() => onPageChange(page)}
-          disabled={page === currentPage}
-          style={{
-            minWidth: "32px",
-            padding: "5px 8px",
-            fontWeight: page === currentPage ? "bold" : "normal",
-            flex: "0 0 auto", // 横スクロールで縮まないように固定
-          }}
-        >
-          {page}
-        </button>
-      ))}
+      {/* 先頭 */}
+      <button onClick={() => onPageChange(1)} disabled={currentPage === 1}>
+        ≪
+      </button>
+
+      {/* 前へ */}
+      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
+        ＜
+      </button>
+
+      {/* 横スクロール可能なページ番号部分 */}
+      <div
+        style={{
+          display: "flex",
+          overflowX: "auto",
+          whiteSpace: "nowrap",
+          gap: "4px",
+          flex: "1 1 auto",
+        }}
+      >
+        {start > 2 && <span style={{ padding: "0 4px" }}>…</span>}
+
+        {pages.map((page) => (
+          <button
+            key={page}
+            onClick={() => onPageChange(page)}
+            disabled={page === currentPage}
+            style={{
+              minWidth: "32px",
+              padding: "5px 8px",
+              fontWeight: page === currentPage ? "bold" : "normal",
+              flex: "0 0 auto",
+            }}
+          >
+            {page}
+          </button>
+        ))}
+
+        {end < totalPages - 1 && <span style={{ padding: "0 4px" }}>…</span>}
+      </div>
+
+      {/* 次へ */}
+      <button
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        ＞
+      </button>
+
+      {/* 最後 */}
+      <button
+        onClick={() => onPageChange(totalPages)}
+        disabled={currentPage === totalPages}
+      >
+        ≫
+      </button>
     </div>
   );
 }
