@@ -19,7 +19,7 @@ if (fs.existsSync(cacheFile)) cache = JSON.parse(fs.readFileSync(cacheFile, "utf
 /**
  * 最新動画を maxResults 件取得（tags含む）
  */
-export async function fetchLatest(maxResults = 10) {
+async function fetchLatest(maxResults = 10) {
   // ① search API で動画ID取得
   const searchUrl = `${BASE_URL}/search?part=id&channelId=${channelId}&order=date&maxResults=${maxResults}&key=${API_KEY}`;
   console.log("DEBUG: Request URL =", searchUrl);
@@ -49,7 +49,7 @@ export async function fetchLatest(maxResults = 10) {
 /**
  * チャンネル内すべての動画を取得（複数ページ対応）
  */
-export async function fetchAll(maxResults = 50) {
+async function fetchAll(maxResults = 50) {
   let allVideos = [];
   let nextPageToken = "";
 
