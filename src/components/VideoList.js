@@ -3,19 +3,11 @@ import videosData from '@site/static/videos.json'; // Docusaurus の static 配�
 import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
-  const [maxButtons] = useState(() => {
-    if (typeof window === "undefined") return 3; // SSR時の安全策
-    const w = window.innerWidth;
-    if (w < 480) return 0;
-    if (w < 768) return 2;
-    return 3;
-  });
-
   // 前後3ページの範囲を計算
   const pageNumbers = [];
   for (
-    let i = Math.max(1, currentPage - maxButtons);
-    i <= Math.min(totalPages, currentPage + maxButtons);
+    let i = Math.max(1, currentPage - 3);
+    i <= Math.min(totalPages, currentPage + 3);
     i++
   ) {
     pageNumbers.push(i);
@@ -39,7 +31,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         ＜
       </button>
 
-      {currentPage > maxButtons + 1 && <div>…</div>}
+      {currentPage > 4 && <div>…</div>}
 
       {/* ページ番号 */}
       {pageNumbers.map((page) => (
@@ -57,7 +49,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
       ))}
 
       {/* 最終ページ側に…を表示 */}
-      {currentPage < totalPages - maxButtons && <div>…</div>}
+      {currentPage < totalPages - 3 && <div>…</div>}
 
       {/* 次へ */}
       <button
