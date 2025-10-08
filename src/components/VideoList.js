@@ -83,15 +83,61 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 }
 
 export default function VideoGallery() {
+  const [filter, setFilter] = useState("all"); // ← 絞り込み状態
   const [page, setPage] = useState(1);
+
   const perPage = 10; // 1ページあたりの動画件数
-  const totalPages = Math.ceil(videosData.length / perPage);
- 
+
+  // 絞り込み処理
+  const filteredVideos = videosData.filter(v => {
+    if (filter === "short") return v.tags?.includes("short");
+    if (filter === "normal") return !v.tags?.includes("short");
+    return true;
+  });
+
+  const totalPages = Math.ceil(filteredVideos.length / perPage);
   const startIndex = (page - 1) * perPage;
-  const pageVideos = videosData.slice(startIndex, startIndex + perPage);
+  const pageVideos = filteredVideos.slice(startIndex, startIndex + perPage);
+
+  // ページ変更時に先頭にスクロール
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   
   return (
-    <div> 
+    <div className="flex flex-col items-center gap-4 my-6"> 
+      {/* ✅ 絞り込みボタン */}
+      <div className="flex gap-2 justify-center">
+        {["all", "short", "normal"].map(f => (
+          <button
+            key={f}
+            onClick={() => {
+              setFilter(f);
+              //setPage(Math.ceil(1));
+              // フィルター後の総ページ数を仮計算して調整
+              const newTotalPages = Math.ceil(
+                videosData.filter(v =>
+                  f === "short" ? v.tags?.includes("short")
+                  : f === "normal" ? !v.tags?.includes("short")
+                  : true
+                ).length / perPage
+              );
+
+              setPage(p => (p > newTotalPages ? newTotalPages || 1 : p));
+            }}
+            className={`px-4 py-2 rounded-lg border transition ${
+              filter === f
+                ? "bg-gray-800 text-white border-gray-800"
+                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+            }`}
+          >
+            {f === "all" ? "全て" : f === "short" ? "ショート" : "動画"}
+          </button>
+        ))}
+      </div>
+
+      {/* ✅ ページネーション */}
       <div className="pagination">
         <Pagination
           currentPage={page}
