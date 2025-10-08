@@ -47,7 +47,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         {pages.map((page) => (
           <button
             key={page}
-            className={`page-number ${page === p ? "active" : ""}`}
+            className={`page-number ${page === currentPage ? "active" : ""}`}
             onClick={() => onPageChange(page)}
             disabled={page === currentPage}
           >
