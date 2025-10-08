@@ -47,14 +47,9 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         {pages.map((page) => (
           <button
             key={page}
+            className={`page-number ${page === p ? "active" : ""}`}
             onClick={() => onPageChange(page)}
             disabled={page === currentPage}
-            style={{
-              minWidth: "32px",
-              padding: "5px 8px",
-              fontWeight: page === currentPage ? "bold" : "normal",
-              flex: "0 0 auto",
-            }}
           >
             {page}
           </button>
@@ -106,9 +101,9 @@ export default function VideoGallery() {
   };
   
   return (
-    <div className="flex flex-col items-center gap-4 my-6"> 
+    <div> 
       {/* ✅ 絞り込みボタン */}
-      <div className="flex gap-2 justify-center">
+      <div className="center-flex">
         {["all", "short", "normal"].map(f => (
           <button
             key={f}
@@ -126,11 +121,7 @@ export default function VideoGallery() {
 
               setPage(p => (p > newTotalPages ? newTotalPages || 1 : p));
             }}
-            className={`px-4 py-2 rounded-lg border transition ${
-              filter === f
-                ? "bg-gray-800 text-white border-gray-800"
-                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-            }`}
+            className={`btn ${filter === f ? "active" : ""}`}
           >
             {f === "all" ? "全て" : f === "short" ? "ショート" : "動画"}
           </button>
@@ -138,7 +129,7 @@ export default function VideoGallery() {
       </div>
 
       {/* ✅ ページネーション */}
-      <div className="pagination">
+      <div className="center-flex">
         <Pagination
           currentPage={page}
           totalPages={totalPages}
@@ -165,7 +156,7 @@ export default function VideoGallery() {
         ))}
       </div>
 
-      <div className="pagination">
+      <div className="center-flex">
         <Pagination
           currentPage={page}
           totalPages={totalPages}
@@ -175,14 +166,49 @@ export default function VideoGallery() {
 
       <style>
         {`
-          .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
+          /* --- 共通コンテナ --- */
+          .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem; /* Tailwindの gap-2 に相当 */
+            margin: 1rem 0;
           }
-          .video-container iframe {
-            width: 100%;
-            aspect-ratio: 16/9;
+          /* --- ボタン共通 --- */
+          .btn {
+            padding: 0.5rem 1rem; /* py-2 px-4 */
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid #ccc; /* border-gray-300 */
+            background-color: #fff;
+            color: #444;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+          }
+          .btn:hover {
+            background-color: #f3f4f6; /* hover:bg-gray-100 */
+          }
+          /* --- ボタン選択中 --- */
+          .btn.active {
+            background-color: #1f2937; /* bg-gray-800 */
+            border-color: #1f2937;
+            color: #fff;
+          }
+          /* --- ページ番号 --- */
+          .page-number {
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.4rem;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: all 0.2s ease;
+          }
+          .page-number:hover {
+            background-color: #f3f4f6;
+          }
+          .page-number.active {
+            background-color: #1f2937;
+            border-color: #1f2937;
+            color: #fff;
           }
           .pagination {
             margin-top: 16px;
@@ -195,6 +221,15 @@ export default function VideoGallery() {
             gap: 0.5rem;           /* ボタン間の間隔 */
             max-width: 100%;       /* 画面幅からはみ出さない */
             overflow-x: auto;      /* はみ出したら横スクロール */
+          }
+          .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+          }
+          .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
           }
           .video-list {
             display: flex;
