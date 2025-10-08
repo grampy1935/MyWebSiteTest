@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import videosData from './videos.json';
-//import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
+import videosData from '@site/static/videos.json'; // Docusaurus の static 配下を読み込む場合
 import he from "he";
  
 function Pagination({ currentPage, totalPages, onPageChange }) {
