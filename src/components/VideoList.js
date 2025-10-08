@@ -129,7 +129,7 @@ export default function VideoGallery() {
       </div>
 
       {/* ✅ ページネーション */}
-      <div className="center-flex">
+      <div className="pagination">
         <Pagination
           currentPage={page}
           totalPages={totalPages}
@@ -156,7 +156,7 @@ export default function VideoGallery() {
         ))}
       </div>
 
-      <div className="center-flex">
+      <div className="pagination">
         <Pagination
           currentPage={page}
           totalPages={totalPages}
