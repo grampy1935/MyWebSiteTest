@@ -148,9 +148,9 @@ export default function VideoGallery() {
         {/* 並び順ボタン */}
         <button
           onClick={() => setIsReversed(!isReversed)}
-          className={`btn ${isReversed ? "active" : ""}`}
+          className={`btn ${isReversed ? "" : ""}`}
         >
-          {isReversed ? "古い順" : "新しい順"}
+          {isReversed ? "古い順△" : "新しい順▽"}
         </button>        
       </div>
 
