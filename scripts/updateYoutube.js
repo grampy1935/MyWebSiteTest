@@ -51,43 +51,40 @@ async function fetchLatest(maxResults = 10) {
 /**
  * チャンネル内すべての動画を取得（複数ページ対応）
  */
-async function fetchAll(maxResults = 50) {
-  console.log("DEBUG: fetchAll");
+async function fetchAllFromUploadsPlaylist(channelId) {
+  console.log("DEBUG: fetchAllFromUploadsPlaylist");
 
+  // ① チャンネル情報を取得し、uploadsプレイリストIDを得る
+  const channelUrl = `${BASE_URL}/channels?part=contentDetails&id=${channelId}&key=${API_KEY}`;
+  const channelData = await fetch(channelUrl).then(res => res.json());
+  const uploadsPlaylistId =
+    channelData.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+
+  if (!uploadsPlaylistId) {
+    console.error("❌ uploads playlist not found");
+    return [];
+  }
+
+  console.log("✅ uploadsPlaylistId =", uploadsPlaylistId);
+
+  // ② プレイリスト内の全動画を取得
   let allVideos = [];
   let nextPageToken = "";
 
   do {
-    // ① search API でページごとの動画IDを取得
-    const searchUrl = `${BASE_URL}/search?part=id&channelId=${channelId}&order=date&maxResults=${maxResults}${
+    const playlistUrl = `${BASE_URL}/playlistItems?part=contentDetails&playlistId=${uploadsPlaylistId}&maxResults=50${
       nextPageToken ? `&pageToken=${nextPageToken}` : ""
     }&key=${API_KEY}`;
+    const playlistData = await fetch(playlistUrl).then(res => res.json());
 
-    const searchData = await fetch(searchUrl).then(res => res.json());
-    if (!searchData.items) {
-      console.log("⚠️ No searchData.items found — stopping.");
-      break;
-    } else {
-      console.log("DEBUG: searchData.items found!");
-    }
-
-    const videoIds = searchData.items
-      .filter(i => i.id.kind === "youtube#video")
-      .map(i => i.id.videoId)
+    const videoIds = playlistData.items
+      .map(i => i.contentDetails.videoId)
       .join(",");
 
-    if (!videoIds) {
-      console.log("⚠️ No videoIds found — stopping.");
-      break;
-    } else {
-      console.log("⚠️ videoIds found !");
-    }
-
-    // ② videos API で詳細を取得
+    // ③ 動画詳細を取得
     const videosUrl = `${BASE_URL}/videos?part=snippet,contentDetails,statistics&id=${videoIds}&key=${API_KEY}`;
     const videosData = await fetch(videosUrl).then(res => res.json());
 
-    // ③ 整形
     const videos = videosData.items.map(item => ({
       id: item.id,
       title: item.snippet.title,
@@ -95,13 +92,13 @@ async function fetchAll(maxResults = 50) {
       tags: item.snippet.tags || [],
     }));
 
-    console.log(`✅ Got ${videos.length} videos from this page`);
     allVideos.push(...videos);
+    nextPageToken = playlistData.nextPageToken || "";
 
-    nextPageToken = searchData.nextPageToken || "";
+    console.log(`✅ Added ${videos.length} videos, total ${allVideos.length}`);
   } while (nextPageToken);
 
-  console.log(`🎉 fetchAll finished — total ${allVideos.length} videos`);
+  console.log(`🎉 Completed: ${allVideos.length} videos`);
   return allVideos;
 }
 
