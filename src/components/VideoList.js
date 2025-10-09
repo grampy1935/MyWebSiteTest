@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 let videosData;
 if (process.env.NODE_ENV === 'development') {
@@ -90,23 +90,40 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 }
 
 export default function VideoGallery() {
-  const [isReversed, setIsReversed] = useState(false);  //  表示順序 
+  const [searchQuery, setSearchQuery] = useState(''); // 検索ワード
+  const [reverse, setReverse] = useState(false);  //  表示順序 
   const [filter, setFilter] = useState("all");          //  絞り込み状態
   const [page, setPage] = useState(1);
-
   const perPage = 10; // 1ページあたりの動画件数
 
-  // 絞り込み処理
-  let filteredVideos = videosData.filter(v => {
-    if (filter === "short") return v.tags?.includes("short");
-    if (filter === "normal") return !v.tags?.includes("short");
-    return true;
-  });
+  // 絞り込み＋検索＋順序反転
+  const filteredVideos = useMemo(() => {
+    let list = videosData;
 
-  // 並び順を反転
-  if (isReversed) {
-    filteredVideos = [...filteredVideos].reverse();
-  }
+    // タグによる short / normal 絞り込み
+    if (filter === 'short') {
+      list = list.filter((v) => v.tags?.includes('short'));
+    } else if (filter === 'normal') {
+      list = list.filter((v) => !v.tags?.includes('short'));
+    }
+
+    // タイトル or タグに検索文字列が含まれているか
+    if (searchQuery.trim() !== '') {
+      const query = searchQuery.toLowerCase();
+      list = list.filter(
+        (v) =>
+          v.title.toLowerCase().includes(query) ||
+          v.tags?.some((t) => t.toLowerCase().includes(query))
+      );
+    }
+
+    // 順序反転
+    if (reverse) {
+      list = [...list].reverse();
+    }
+
+    return list;
+  }, [filter, searchQuery, reverse]);
 
   const totalPages = Math.ceil(filteredVideos.length / perPage);
   const startIndex = (page - 1) * perPage;
@@ -147,11 +164,36 @@ export default function VideoGallery() {
 
         {/* 並び順ボタン */}
         <button
-          onClick={() => setIsReversed(!isReversed)}
-          className={`btn ${isReversed ? "" : ""}`}
+          onClick={() => setReverse(!reverse)}
+          className={`btn ${reverse ? "" : ""}`}
         >
-          {isReversed ? "古い順△" : "新しい順▽"}
+          {reverse ? "古い順△" : "新しい順▽"}
         </button>        
+      </div>
+
+      {/* 検索ボックス */}
+      <div className="center-flex-vertical">
+        検索
+        <input
+          type="text"
+          placeholder="タイトルまたはタグで検索..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{ width: '30%', padding: '0.5rem', marginBottom: '1rem', verticalAlign: 'top', }}
+        />
+        {searchQuery && (
+          <button
+            className="btn"
+            style={{
+              padding: '0.4rem 0.8rem',
+              marginBottom: '1rem',
+              fontSize: '0.9rem',
+            }}
+            onClick={() => setSearchQuery('')}
+          >
+            ✕ クリア
+          </button>
+        )}
       </div>
 
       {/* ✅ ページネーション */}
@@ -200,6 +242,14 @@ export default function VideoGallery() {
             gap: 0.5rem; /* Tailwindの gap-2 に相当 */
             margin: 1rem 0;
           }
+          /* --- 縦方向に揃える専用バリエーション --- */
+          .center-flex-vertical {
+            display: flex;
+            justify-content: center;
+            vertical-align: middle; /* ← これで縦中央 */
+            gap: 0.5rem;
+            margin: 1rem 0;
+          }            
           /* --- ボタン共通 --- */
           .btn {
             padding: 0.5rem 1rem; /* py-2 px-4 */
