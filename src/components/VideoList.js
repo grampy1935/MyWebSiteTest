@@ -90,17 +90,23 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
 }
 
 export default function VideoGallery() {
-  const [filter, setFilter] = useState("all"); // ← 絞り込み状態
+  const [isReversed, setIsReversed] = useState(false);  //  表示順序 
+  const [filter, setFilter] = useState("all");          //  絞り込み状態
   const [page, setPage] = useState(1);
 
   const perPage = 10; // 1ページあたりの動画件数
 
   // 絞り込み処理
-  const filteredVideos = videosData.filter(v => {
+  let filteredVideos = videosData.filter(v => {
     if (filter === "short") return v.tags?.includes("short");
     if (filter === "normal") return !v.tags?.includes("short");
     return true;
   });
+
+  // 並び順を反転
+  if (isReversed) {
+    filteredVideos = [...filteredVideos].reverse();
+  }
 
   const totalPages = Math.ceil(filteredVideos.length / perPage);
   const startIndex = (page - 1) * perPage;
@@ -138,6 +144,14 @@ export default function VideoGallery() {
             {f === "all" ? "全て" : f === "short" ? "ショート" : "動画"}
           </button>
         ))}
+
+        {/* 並び順ボタン */}
+        <button
+          onClick={() => setIsReversed(!isReversed)}
+          className={`btn ${isReversed ? "active" : ""}`}
+        >
+          {isReversed ? "古い順" : "新しい順"}
+        </button>        
       </div>
 
       {/* ✅ ページネーション */}
