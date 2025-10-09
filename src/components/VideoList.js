@@ -179,7 +179,7 @@ export default function VideoGallery() {
           placeholder="タイトルまたはタグで検索..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          style={{ width: '30%', padding: '0.5rem', marginBottom: '1rem', verticalAlign: 'top', }}
+          style={{ width: '50%', padding: '0.5rem', marginBottom: '1rem', verticalAlign: 'top', }}
         />
         {searchQuery && (
           <button
