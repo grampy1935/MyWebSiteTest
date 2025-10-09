@@ -11,13 +11,15 @@ on:
         required: false
         default: "false"
   schedule:
-    - cron: "5 11 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
+#    - cron: "5 11 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
+    - cron: "26 19 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
 
 permissions:
   contents: write
 
 jobs:
   update-videos:
+    if: github.ref == 'refs/heads/main'  # ← mainブランチ以外ではスキップ
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3     # mainブランチをチェックアウト
