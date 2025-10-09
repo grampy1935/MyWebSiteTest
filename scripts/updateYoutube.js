@@ -51,7 +51,7 @@ async function fetchLatest(maxResults = 10) {
 /**
  * チャンネル内すべての動画を取得（複数ページ対応）
  */
-async function fetchAllFromUploadsPlaylist(channelId) {
+sync function fetchAll(maxResults = 50) {
   console.log("DEBUG: fetchAllFromUploadsPlaylist");
 
   // ① チャンネル情報を取得し、uploadsプレイリストIDを得る
