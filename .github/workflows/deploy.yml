@@ -11,8 +11,7 @@ on:
         required: false
         default: "false"
   schedule:
-#    - cron: "5 11 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
-    - cron: "35 19 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
+    - cron: "5 11 * * *"  # ← 毎日 20:05 JST (11:05 UTC) に自動実行
 
 permissions:
   contents: write
