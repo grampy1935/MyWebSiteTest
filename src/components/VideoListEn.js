@@ -1,5 +1,5 @@
 import "./VideoList.css";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 
 let videosData;
 if (process.env.NODE_ENV === 'development') {
@@ -95,6 +95,8 @@ export default function VideoGallery() {
   const [reverse, setReverse] = useState(false);  //  表示順序 
   const [filter, setFilter] = useState("all");          //  絞り込み状態
   const [page, setPage] = useState(1);
+  const [displayPage, setDisplayPage] = useState(1); // 実際に表示するページ
+  const timerRef = useRef(null);
   const perPage = 10; // 1ページあたりの動画件数
 
   // 絞り込み＋検索＋順序反転
@@ -127,15 +129,23 @@ export default function VideoGallery() {
   }, [filter, searchQuery, reverse]);
 
   const totalPages = Math.ceil(filteredVideos.length / perPage);
-  const startIndex = (page - 1) * perPage;
+  const startIndex = (displayPage - 1) * perPage;
   const pageVideos = filteredVideos.slice(startIndex, startIndex + perPage);
 
-  // ページ変更時に先頭にスクロール
-  const handlePageChange = (newPage) => {
+  // 🔸 ページ番号クリック時
+  function handlePageChange(newPage) {
+    // 以前のタイマーをキャンセル
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    // 300ms後にページ反映
+    timerRef.current = setTimeout(() => {
+      setDisplayPage(newPage);
+    }, 300);
+
+    // 即座にボタンのハイライトは反映
     setPage(newPage);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  
+  }
+
   return (
     <div> 
       {/* ✅ 絞り込みボタン */}
@@ -145,7 +155,7 @@ export default function VideoGallery() {
             key={f}
             onClick={() => {
               setFilter(f);
-              //setPage(Math.ceil(1));
+              //handlePageChange(Math.ceil(1));
               // フィルター後の総ページ数を仮計算して調整
               const newTotalPages = Math.ceil(
                 videosData.filter(v =>
@@ -155,7 +165,7 @@ export default function VideoGallery() {
                 ).length / perPage
               );
 
-              setPage(p => (p > newTotalPages ? newTotalPages || 1 : p));
+              handlePageChange(p => (p > newTotalPages ? newTotalPages || 1 : p));
             }}
             className={`btn ${filter === f ? "active" : ""}`}
           >
@@ -202,7 +212,7 @@ export default function VideoGallery() {
         <Pagination
           currentPage={page}
           totalPages={totalPages}
-          onPageChange={setPage}
+          onPageChange={handlePageChange}
         />
       </div>
 
@@ -229,7 +239,7 @@ export default function VideoGallery() {
         <Pagination
           currentPage={page}
           totalPages={totalPages}
-          onPageChange={setPage}
+          onPageChange={handlePageChange}
         />
       </div>
     </div>
