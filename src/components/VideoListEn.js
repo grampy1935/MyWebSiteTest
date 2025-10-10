@@ -168,7 +168,7 @@ export default function VideoGallery() {
           onClick={() => setReverse(!reverse)}
           className={`btn ${reverse ? "" : ""}`}
         >
-          {reverse ? "Oldest First△" : "Newest First▽"}
+          {reverse ? "Oldest△" : "Newest▽"}
         </button>        
       </div>
 
