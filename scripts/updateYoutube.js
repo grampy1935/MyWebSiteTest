@@ -103,9 +103,13 @@ async function fetchAll(maxResults = 50) {
 }
 
 (async () => {
-  const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs"]; // 除外したい動画ID
-  //      "videoId": "5lNoj9EKuUM", "title": "16秒ごとの時間と瞬間の時間（1985）",
-  //      "videoId": "e3Ocd4BkArs", "ロール楽譜の作り方",
+  const excludeIds = ["5lNoj9EKuUM", "e3Ocd4BkArs", "jZ1UPjQD0hI", "CuQjypPdhFY", "YzvCrjbESSQ"]; // 除外したい動画ID
+  //      "videoId":  "5lNoj9EKuUM", "title": "16秒ごとの時間と瞬間の時間（1985）",
+  //      "videoId":  "e3Ocd4BkArs", "ロール楽譜の作り方",
+  //      "videoId":  "jZ1UPjQD0hI", "「キラキラ星」を....。ショート No.1"
+  //      "videoId":  "CuQjypPdhFY", "「Pretender」撮影時のNG動画" "other"
+  //      "videoId":  "YzvCrjbESSQ", "ソーラー回転台の速度調節" "other"
+  
   console.log("Tag情報も取得！");
 
   let videos;
