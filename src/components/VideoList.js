@@ -1,3 +1,4 @@
+import "./VideoList.css";
 import React, { useState, useMemo } from 'react';
 
 let videosData;
@@ -232,109 +233,6 @@ export default function VideoGallery() {
         />
       </div>
 
-      <style>
-        {`
-          /* --- 共通コンテナ --- */
-          .center-flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem; /* Tailwindの gap-2 に相当 */
-            margin: 1rem 0;
-          }
-          /* --- 縦方向に揃える専用バリエーション --- */
-          .center-flex-vertical {
-            display: flex;
-            justify-content: center;
-            vertical-align: middle; /* ← これで縦中央 */
-            gap: 0.5rem;
-            margin: 1rem 0;
-          }            
-          /* --- ボタン共通 --- */
-          .btn {
-            padding: 0.5rem 1rem; /* py-2 px-4 */
-            border-radius: 0.5rem; /* rounded-lg */
-            border: 1px solid #ccc; /* border-gray-300 */
-            background-color: #fff;
-            color: #444;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-          }
-          .btn:hover {
-            background-color: #f3f4f6; /* hover:bg-gray-100 */
-          }
-          /* --- ボタン選択中 --- */
-          .btn.active {
-            background-color: #1f2937; /* bg-gray-800 */
-            border-color: #1f2937;
-            color: #fff;
-          }
-          /* --- ページ番号 --- */
-          .page-number {
-            padding: 0.4rem 0.8rem;
-            border-radius: 0.4rem;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            transition: all 0.2s ease;
-          }
-          .page-number:hover {
-            background-color: #f3f4f6;
-          }
-          .page-number.active {
-            background-color: #1f2937;
-            border-color: #1f2937;
-            color: #fff;
-          }
-          .pagination {
-            margin-top: 16px;
-            text-align: center;
-          }
-          .pagination {
-            display: flex;
-            flex-wrap: wrap;       /* 幅が狭いと折り返す */
-            justify-content: center; /* 中央寄せ */
-            gap: 0.5rem;           /* ボタン間の間隔 */
-            max-width: 100%;       /* 画面幅からはみ出さない */
-            overflow-x: auto;      /* はみ出したら横スクロール */
-          }
-          .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
-          }
-          .video-container iframe {
-            width: 100%;
-            aspect-ratio: 16/9;
-          }
-          .video-list {
-            display: flex;
-            flex-direction: column; /* 縦並び */
-            gap: 2rem; /* 動画の間隔 */
-          }
-          .video-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 中央寄せ */
-          }
-          .video-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            align-self: flex-start; /* ← タイトルだけ左寄せ */
-            text-align: left;
-          }
-          .video-wrapper {
-            width: 100%;
-            max-width: 560px; /* PC の場合の最大幅 */
-            aspect-ratio: 16 / 9; /* 動画をアスペクト比固定でレスポンシブ */
-          }
-          .video-wrapper iframe {
-            width: 100%;
-            height: 100%;
-          }
-        `}
-      </style>
     </div>
   );
 }
