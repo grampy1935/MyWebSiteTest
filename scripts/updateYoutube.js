@@ -109,7 +109,8 @@ async function fetchAll(maxResults = 50) {
   //      "videoId":  "jZ1UPjQD0hI", "「キラキラ星」を....。ショート No.1"
   //      "videoId":  "CuQjypPdhFY", "「Pretender」撮影時のNG動画" "other"
   //      "videoId":  "YzvCrjbESSQ", "ソーラー回転台の速度調節" "other"
-  
+  const excludeTags = ["exclude", "hidden", "private"]; // 複数指定も可能
+
   console.log("Tag情報も取得！");
 
   let videos;
@@ -126,6 +127,19 @@ async function fetchAll(maxResults = 50) {
   // videos から指定したidの動画を除外
   //videos = videos.filter(v => !excludeIds.includes(v.id));
   videos = videos.filter(v => v.id && !excludeIds.includes(v.id));
+
+  // 除外フィルタ
+  videos = videos.filter(v => {
+    // タグが存在しない場合 → 除外対象ではない
+    if (!v.tags || v.tags.length === 0) return true;
+
+    // 除外タグを含むかどうかチェック
+    const hasExcludedTag = v.tags.some(tag =>
+      excludeTags.includes(tag.toLowerCase())
+    );
+
+    return !hasExcludedTag; // 除外タグがなければ残す
+  });
 
   // キャッシュ保存
   fs.writeFileSync(cacheFile, JSON.stringify(videos, null, 2));
