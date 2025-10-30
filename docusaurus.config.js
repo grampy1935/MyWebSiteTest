@@ -30,6 +30,20 @@ const config = {
   trailingSlash: false,
   //baseUrl: '/',
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexPages: true,                  // ページもインデックス
+        docsRouteBasePath: '/',            // ドキュメントをルート配下に置く場合
+        language: ['en', 'ja'],            // 英語・日本語
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'grampy1935', // Usually your GitHub org/user name.
