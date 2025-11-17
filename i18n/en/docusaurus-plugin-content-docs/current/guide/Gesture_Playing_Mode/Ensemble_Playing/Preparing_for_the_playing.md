@@ -18,7 +18,7 @@ After completing settings, tap the “Back” button to return to the Home View.
 
 Upon returning to the Home View, you will see an icon indicating Ensemble Mode and the number of iPhones participating in the ensemble.
 
-All participants must select the same score containing the parts each will play (Leader and Member parts).
-You can assign instruments to each performer by setting the sound “Amplitude” of tracks other than the one you are playing to -90.
+Please prepare the score for the part each leader and member will play in advance and select the corresponding score individually.
+Alternatively, everyone can select the same score containing all parts. By setting the “sound amplitude” of all tracks except their own playing track to -90, each performer can be assigned a specific instrument.
 
 
