@@ -207,22 +207,32 @@ export default function VideoGallery() {
       </div>
 
       <div className="video-list">
-        {pageVideos.map(video => (
-          <div key={video.id} className="video-item">
-            <h3 className="video-title">{he.decode(video.title)}</h3>
-            <div className="video-wrapper">
-              <iframe
-                width="100%"
-                height="315"
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowFullScreen
-              />
+        {pageVideos.map(video => {
+          // 日付整形
+            const date = new Date(video.publishedAt);
+            const formatted = date.toLocaleDateString('ja-JP', {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+          });
+          return (
+            <div key={video.id} className="video-item">
+              <h3 className="video-title">{he.decode(video.title)}</h3>
+              <p>投稿日: {formatted}</p>
+              <div className="video-wrapper">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="pagination">
