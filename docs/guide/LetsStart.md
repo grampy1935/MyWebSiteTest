@@ -7,5 +7,3 @@ sidebar_position: 1
 まずは、アイコンをタップ。
 
 ![アイコン](/img/RollPlayerPiano-iOS-Default-128x128.png)
-
-テスト。
