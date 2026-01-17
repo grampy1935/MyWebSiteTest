@@ -1,0 +1,30 @@
+name: Mirroring Test
+ 
+on:
+  push:
+  workflow_dispatch:
+ 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+ 
+      - name: Manual mirror clone and mirro push
+        run: |
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          REPO="$GITHUB_REPOSITORY"
+          REPO_URL="ssh://git@192.168.0.38:2222/${REPO}.git"
+          REPO_DIR="$(basename "$REPO_URL" .git).git"
+          GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519 -p 2222 -o StrictHostKeyChecking=no' \
+          git clone --mirror "$REPO_URL" "$REPO_DIR"
+          cd "$REPO_DIR"
+          pwd
+          ls -l
+          GIT_SSH_COMMAND='ssh -i ~/.ssh/id_ed25519 -p 222 -o StrictHostKeyChecking=no' \
+          git push --mirror ssh://git@192.168.0.36:222/${REPO}.git
