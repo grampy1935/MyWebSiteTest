@@ -52,9 +52,10 @@ jobs:
           rm -rf "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}"
           cd "\$HOME/Documents/Development/Docker/nginx/html"
           tar xzvf "./${REPO_DIR}.tgz"
-          # mv ./build "${REPO_DIR}"
-          #rm "./${REPO_DIR}.tgz"
-          #docker compose up -d
+          mv ./build "${REPO_DIR}"
+          rm "./${REPO_DIR}.tgz"
+          cd ../
+          docker compose up -d
           #cp -r ./build "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}" 
           #ls -l "\$HOME/Documents/Development/Docker/nginx/html/"            # for debug
 
