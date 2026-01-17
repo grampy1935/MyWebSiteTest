@@ -50,6 +50,7 @@ jobs:
           cd "\$HOME/Documents/Development/Docker/nginx/"
           docker compose down
           rm -rf "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}"
+          cd "\$HOME/Documents/Development/Docker/nginx/html"
           tar xzvf "./${REPO_DIR}.tgz"
           # mv ./build "${REPO_DIR}"
           #rm "./${REPO_DIR}.tgz"
