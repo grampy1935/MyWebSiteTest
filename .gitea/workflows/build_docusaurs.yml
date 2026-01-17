@@ -69,7 +69,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519 \
               takatosi@192.168.0.38 << EOF
-          cd ~/Development/Docker/nginx/html
+          cd "\$HOME/Development/Docker/nginx/html"
           mv "\$HOME/${REPO_DIR}.tgz" ./
           ls -l ./            # for debug
           tar xzvf "./${REPO_DIR}.tgz"
