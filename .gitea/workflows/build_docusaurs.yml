@@ -47,7 +47,7 @@ jobs:
           # ビルドをnginxにコピーする
           #
           rm -rf "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}"
-          cp -r ./build "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}" 
+          #cp -r ./build "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}" 
           #ls -l "\$HOME/Documents/Development/Docker/nginx/html/"            # for debug
 
           EOF
