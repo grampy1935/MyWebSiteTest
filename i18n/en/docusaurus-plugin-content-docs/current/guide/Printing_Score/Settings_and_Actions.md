@@ -8,9 +8,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The selected score in Gesture Performance mode or Auto Play mode can be printed by tapping the Print button on the Home view.
 
-Tapping the Print button <img src={useBaseUrl('/img/Printing_Score/printer.svg')} alt="プリントボタン" width="18" height="18" /> opens the "Print Settings" view. After adjusting the settings, tap “Create and Print PDF”.
+Tap the Print button <img src={useBaseUrl('/img/Printing_Score/printer.svg')} alt="プリントボタン" width="18" height="18" /> to open the print settings view and configure the various settings.
 
-This opens the AirPrint "Options" view. Select your printer and tap the Print button to print the sheet score.
+If you select “Toy Disc” or “Turntable (90mm)” under “Media Type” for printing, you can choose the lens position relative to the sheet score being scanned. Select the option that matches your device configuration.
+Once settings are complete, tap “Create and print PDF”. This opens the AirPrint options view. Select your printer and tap the print button to print the sheet score.
 
 Note: Currently, printing is only possible on cut sheets. If you selected “Piano Roll(40mm)” or “Piano Roll(70mm)” as the paper type, cut the printed sheet score and connect the pieces to create roll sheet score, as shown in the following video.
 
