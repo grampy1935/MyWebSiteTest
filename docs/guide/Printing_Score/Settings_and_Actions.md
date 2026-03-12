@@ -17,4 +17,4 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ocd4BkArs" allowFullScreen></iframe>
 ロール楽譜の作り方
 
-
+なお「玩具ディスク」あるいは「回転台（90mm）」を選択した場合、4/4拍子でテンポが♩=120の場合に、おおよそ15小節分が１枚のディスクに記録が可能です。
