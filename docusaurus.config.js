@@ -22,13 +22,12 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://grampy1935.github.io',
-  //url: 'https://your-docusaurus-site.example.com',
+  url: isTest ? 'https://grampy1935.github.io' : 'https://grampy1935.com',
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: isTest ? "/MyWebSiteTest/" : "/MyWebSite/",
+  baseUrl: isTest ? "/MyWebSiteTest/" : "/",
   trailingSlash: false,
-  //baseUrl: '/',
 
   plugins: [
     [
