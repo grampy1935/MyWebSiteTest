@@ -1,0 +1,81 @@
+name: Docusaurs build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+      - name: Run command on Mac
+        run: |
+          REPO="$GITHUB_REPOSITORY"
+          REPO_URL="ssh://git@rp4gitea/${REPO}.git"
+          REPO_DIR="$(basename "$REPO_URL" .git)"
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519 \
+              takatosi@192.168.0.35 << EOF
+          which npm                             # for debug
+          whoami                                # for debug
+          echo "REPO = ${REPO}"                 # for debug
+          echo "REPO_URL = ${REPO_URL}"         # for debug
+          echo "REPO_DIR = ${REPO_DIR}"         # for debug
+          
+          # プロジェクトフォルダーに移動する
+          #
+          DIR="\$HOME/Documents/Development/Docusaurus/${REPO_DIR}"
+          echo "DIR = \$DIR"                    # for debug
+          cd \$DIR
+          pwd                                   # for debug
+          rm -rf ./build
+          BASE_URL='/${REPO_DIR}/' npm run build
+
+          # ビルドをtarで固めてraspberrypi4に転送する
+          #
+          tar czvf "${REPO_DIR}.tgz" ./build/
+          scp "${REPO_DIR}.tgz" rp4wop:"${REPO_DIR}.tgz"
+          #rm "${REPO_DIR}.tgz"
+
+          # ビルドをnginxにコピーする
+          #
+          mv "${REPO_DIR}.tgz" "\$HOME/Documents/Development/Docker/nginx/html/"
+          cd "\$HOME/Documents/Development/Docker/nginx/"
+          docker compose down
+          rm -rf "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}"
+          cd "\$HOME/Documents/Development/Docker/nginx/html"
+          tar xzvf "./${REPO_DIR}.tgz"
+          mv ./build "${REPO_DIR}"
+          rm "./${REPO_DIR}.tgz"
+          cd ../
+          docker compose up -d
+          #cp -r ./build "\$HOME/Documents/Development/Docker/nginx/html/${REPO_DIR}" 
+          #ls -l "\$HOME/Documents/Development/Docker/nginx/html/"            # for debug
+
+          EOF
+
+      - name: Run command on Raspberrypi4
+        run: |
+          REPO="$GITHUB_REPOSITORY"
+          REPO_URL="ssh://git@rp4gitea/${REPO}.git"
+          REPO_DIR="$(basename "$REPO_URL" .git)"
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519 \
+              takatosi@192.168.0.38 << EOF
+          cd "\$HOME/Development/Docker/nginx/html"
+          mv "\$HOME/${REPO_DIR}.tgz" ./
+          ls -l ./            # for debug
+          tar xzvf "./${REPO_DIR}.tgz"
+          rm -rf ./${REPO_DIR}
+          rm "./${REPO_DIR}.tgz"
+          mv ./build ./${REPO_DIR}
+
+          EOF
+
