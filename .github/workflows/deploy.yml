@@ -56,9 +56,14 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
+      - name: Prepare prod build
+        run: |
+          mkdir public
+          cp -r build/* public/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./public
           publish_branch: gh-pages
