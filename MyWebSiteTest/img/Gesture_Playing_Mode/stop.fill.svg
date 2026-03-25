@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Generator: Apple Native CoreSVG 341-->
+
+<svg
+   version="1.1"
+   viewBox="0 0 61.702007 62.279011"
+   id="svg33"
+   sodipodi:docname="stop.fill.svg"
+   width="61.702007"
+   height="62.279011"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs33" />
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.50424242"
+     inkscape:cx="45.612981"
+     inkscape:cy="353.00481"
+     inkscape:window-width="1680"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg33" />
+  <!--glyph: "1006F7", point size: 100.0, font version: "20.0d10e1", template writer version: "138.0.0"-->
+  <style
+     id="style1">.monochrome-0 {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:stop.fill}
+
+.multicolor-0:tintColor {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:stop.fill}
+
+.hierarchical-0:primary {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:stop.fill}
+
+.SFSymbolsPreviewWireframe {fill:none;opacity:1.0;stroke:black;stroke-width:0.5}
+</style>
+  <path
+     d="m 5.6205066,61.795993 c -1.3437,-0.32531 -3.1579,-1.42262 -4.0317,-2.43845 L 1.0663004e-4,57.510583 v -26.0983 c 0,-28.9376903 -0.086,-28.3715503 4.62669996996,-30.3407503 3.4463,-1.43996999 49.0414004,-1.42360999 52.4936004,0.0188 4.4946,1.87794 4.5816,2.44556 4.5816,29.8889303 0,20.79482 -0.1696,25.00201 -1.0855,26.93224 -1.9662,4.14342 -2.4889,4.2227 -28.7137,4.35536 -13.1117,0.0663 -24.9387004,-0.14558 -26.2823004,-0.4709 z"
+     id="path33"
+     style="stroke-width:0.701158" />
+</svg>

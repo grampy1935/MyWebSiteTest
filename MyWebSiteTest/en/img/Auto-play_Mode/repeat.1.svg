@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Generator: Apple Native CoreSVG 341-->
+
+<svg
+   version="1.1"
+   viewBox="0 0 84.53318 70.959023"
+   id="svg36"
+   sodipodi:docname="repeat.1.svg"
+   width="84.53318"
+   height="70.959023"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     id="namedview36"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0169697"
+     inkscape:cx="36.688702"
+     inkscape:cy="78.335337"
+     inkscape:window-width="1568"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg36" />
+  <!--glyph: "10029F", point size: 100.0, font version: "20.0d10e1", template writer version: "138.0.0"-->
+  <style
+     id="style1">.defaults {-sfsymbols-wiggle-style:linear;-sfsymbols-wiggle-angle:0}
+
+.monochrome-0 {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:repeat.1}
+.monochrome-1 {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:repeat.1}
+
+.multicolor-0:tintColor {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:repeat.1}
+.multicolor-1:tintColor {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:repeat.1}
+
+.hierarchical-0:secondary {-sfsymbols-motion-group:1;-sfsymbols-layer-tags:repeat.1}
+.hierarchical-1:primary {-sfsymbols-motion-group:0;-sfsymbols-layer-tags:repeat.1}
+
+.SFSymbolsPreviewWireframe {fill:none;opacity:1.0;stroke:black;stroke-width:0.5}
+</style>
+  <g
+     id="Regular-S"
+     transform="translate(-9.51562,71.1973)"
+     style="fill:#000000;fill-opacity:1">
+    <path
+       class="monochrome-0 multicolor-0:tintColor hierarchical-0:secondary SFSymbolsPreviewWireframe"
+       d="m 13.3789,-33.6426 c 2.002,0 3.5645,-1.5625 3.5645,-3.6133 v -3.7109 c 0,-6.25 4.4921,-10.498 11.1328,-10.498 h 22.4121 v 8.9355 c 0,1.709 0.9765,2.6367 2.6855,2.6367 0.7813,0 1.5625,-0.2929 2.1485,-0.7812 l 14.5996,-12.2559 c 1.3183,-1.123 1.3672,-2.6855 0,-3.8086 L 55.3223,-69.043 c -0.586,-0.4882 -1.3672,-0.7812 -2.1485,-0.7812 -1.709,0 -2.6855,0.9277 -2.6855,2.6367 v 8.6426 H 28.8086 c -11.5723,0 -19.04298,6.5918 -19.04298,17.041 v 4.248 c 0,2.0508 1.56248,3.6133 3.61328,3.6133 z m 76.6113,-3.125 c -2.0507,0 -3.6132,1.5625 -3.6132,3.6133 v 3.7109 c 0,6.25 -4.4922,10.4981 -11.084,10.4981 H 44.6289 v -8.8379 c 0,-1.709 -1.0254,-2.6367 -2.7344,-2.6367 -0.7324,0 -1.5625,0.2929 -2.1484,0.7812 l -14.5996,12.2559 c -1.2695,1.123 -1.3184,2.6855 0,3.8086 l 14.5996,12.30467 c 0.5859,0.48828 1.416,0.781249 2.1484,0.781249 1.709,0 2.7344,-0.927739 2.7344,-2.636719 v -8.7402 h 29.9316 c 11.5723,0 19.043,-6.5918 19.043,-17.041 v -4.2481 c 0,-2.0508 -1.5625,-3.6133 -3.6133,-3.6133 z"
+       id="path33"
+       style="fill:#000000;fill-opacity:1;-sfsymbols-layer-tags:repeat 0.1;-sfsymbols-motion-group:1" />
+    <path
+       class="monochrome-1 multicolor-1:tintColor hierarchical-1:primary SFSymbolsPreviewWireframe"
+       d="m 90.0391,-44.7266 c 2.3437,0 3.7597,-1.416 3.7597,-3.8086 v -17.6757 c 0,-2.8321 -1.8066,-4.7364 -4.5898,-4.7364 -2.2949,0 -3.6133,0.7325 -5.3711,2.1485 l -4.9805,3.9062 c -0.9277,0.7324 -1.1719,1.3672 -1.1719,2.2461 0,1.2695 1.0254,2.1973 2.4903,2.1973 0.5371,0 1.123,-0.1953 1.709,-0.6348 l 3.955,-3.2226 h 0.3907 v 15.7714 c 0,2.3926 1.416,3.8086 3.8086,3.8086 z"
+       id="path34"
+       style="fill:#000000;fill-opacity:1;-sfsymbols-layer-tags:repeat 0.1;-sfsymbols-motion-group:0" />
+  </g>
+</svg>
