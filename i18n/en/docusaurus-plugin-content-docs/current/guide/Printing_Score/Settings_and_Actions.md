@@ -18,4 +18,4 @@ Note: Currently, printing is only possible on cut sheets. If you selected “Pia
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e3Ocd4BkArs" allowFullScreen></iframe>
 How to Make Roll Sheet Score
 
-When “Toy Disc” or “Turntable (90 mm)” is selected, a single disc can accommodate approximately 15 measures at a tempo of ♩ = 120 in 4/4 time.
+Note: When “Toy Disc” or “Turntable (90 mm)” is selected, a single disc can accommodate approximately 15 measures at a tempo of ♩ = 120 in 4/4 time.
