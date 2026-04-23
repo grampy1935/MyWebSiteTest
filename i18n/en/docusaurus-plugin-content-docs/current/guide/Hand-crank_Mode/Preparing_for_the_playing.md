@@ -13,3 +13,5 @@ At this point, you can zoom in or out using a two-finger pinch gesture within th
 Similarly, you can adjust the focus using a rotation gesture.
 
 Once the camera frame is set and the focus is adjusted, you are ready to perform.
+
+Tip💡 Double-tap the score view to display the level. The red circle will move according to the inclination of the iPhone, and will turn green when the iPhone is horizontal. Use this to assist in positioning the iPhone.
