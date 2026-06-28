@@ -4,7 +4,7 @@ console.log("DEBUG: process.argv[2] =", process.argv[2]);
 console.log("DEBUG fullFetch:", fullFetch);
 
 const fs = require("fs");
-const fetch = require("node-fetch");
+//const fetch = require("node-fetch");
 
 const cacheFile = "static/videos.json";  // ← 出力先を static にする
 //const cacheFile = ".youtube-cache.json";
